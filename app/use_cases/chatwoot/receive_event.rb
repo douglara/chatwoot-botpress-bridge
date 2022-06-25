@@ -6,7 +6,7 @@ class Chatwoot::ReceiveEvent
   end
 
   def self.valid_event?(event)
-    event['event'] == 'message_created' && event['message_type'] == 'incoming'
+    event['event'] == 'message_created' && event['message_type'] == 'incoming' && event['conversation']['status'] == 'pending'
   end
 
   def self.process_event(event)
