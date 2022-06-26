@@ -96,6 +96,7 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
+    kind (5.10.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -166,6 +167,11 @@ GEM
     timeout (0.3.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    u-attributes (2.8.0)
+      kind (>= 4.0, < 6.0)
+    u-case (4.5.1)
+      kind (>= 5.6, < 6.0)
+      u-attributes (>= 2.7, < 3.0)
     vcr (6.1.0)
     webmock (3.14.0)
       addressable (>= 2.8.0)
@@ -187,6 +193,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.3)
   tzinfo-data
+  u-case (~> 4.5.1)
   vcr
   webmock
 

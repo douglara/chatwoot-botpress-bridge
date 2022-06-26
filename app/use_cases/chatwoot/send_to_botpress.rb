@@ -1,10 +1,14 @@
 require 'faraday'
 
-class Chatwoot::SendToBotpress
-  def self.call(event)
+class Chatwoot::SendToBotpress < Micro::Case
+  attributes :event
+  attributes :botpress_endpoint
+  attributes :botpress_bot_id
+
+  def call!
     conversation_id = event['conversation']['id']
     message_content = event['content']
-    url = "#{ENV['BOTPRESS_ENDPOINT']}/api/v1/bots/#{ENV['BOTPRESS_BOT_ID']}/converse/#{conversation_id}"
+    url = "#{botpress_endpoint}/api/v1/bots/#{botpress_bot_id}/converse/#{conversation_id}"
 
     body = {
       'text': "#{message_content}",
@@ -15,6 +19,12 @@ class Chatwoot::SendToBotpress
     }
 
     response = Faraday.post(url, body.to_json, {'Content-Type': 'application/json'})
-    JSON.parse(response.body)
+    if (response.status == 200)
+      Success result: JSON.parse(response.body)
+    elsif (response.status == 404 && response.body.include?('Invalid Bot ID'))
+      Failure result: { message: 'Invalid Bot ID' }
+    else
+      Failure result: { message: 'Invalid botpress endpoint' }
+    end
   end
 end

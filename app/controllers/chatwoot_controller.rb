@@ -1,6 +1,7 @@
 class ChatwootController < ApplicationController
   def webhook
-    result = Chatwoot::ReceiveEvent.call(params)
-    render json: result
+    Chatwoot::ReceiveEvent.call(event: params)
+    .on_success { |result| render(200, json: result.data) }
+    .on_failure { |result| render_json(500, json: result.data) }
   end
 end
