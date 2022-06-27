@@ -18,4 +18,4 @@ jobs:
           bundle install --jobs 4 --retry 3 --path vendor/bundle
     
       - name: Run tests
-        run: bundle exec ./bin/rails test"
+        run: bundle exec rails test"
