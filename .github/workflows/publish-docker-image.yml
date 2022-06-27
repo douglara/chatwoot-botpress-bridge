@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
@@ -25,6 +26,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: docker/Dockerfile
+          file: Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/chatwoot-botpress-bridge:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/chatwoot-botpress-bridge:0
