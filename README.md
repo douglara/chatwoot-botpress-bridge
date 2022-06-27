@@ -1,24 +1,91 @@
-# README
+# About
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a bridge connection chatwoot botpress.
 
-Things you may want to cover:
+# Running local
 
-* Ruby version
+You need `ruby 3.0.3`
+Clone this project:
+```sh
+git clone https://github.com/douglara/chatwoot-botpress-bridge.git
+cd chatwoot-botpress-bridge
+```
 
-* System dependencies
+Copy configuration file:
+```sh
+cp .env.example .env
+```
 
-* Configuration
+Edit vars in file `.env`:
+```sh
+BOTPRESS_ENDPOINT=
+BOTPRESS_BOT_ID=
+CHATWOOT_ENDPOINT=
+CHATWOOT_BOT_TOKEN=
+```
 
-* Database creation
+Start server:
+```sh
+rails s
+```
 
-* Database initialization
 
-* How to run the test suite
+# Running tests
 
-* Services (job queues, cache servers, search engines, etc.)
+```sh
+rails test
+```
 
-* Deployment instructions
 
-* ...
+#  Create an agent bot
+
+Go to your chatwoot directory.  Start a rails console in your directory.
+
+```
+bundle exec rails c
+```
+
+Inside the rails console, type the following commands to create an agent bot and get its access token. Save the retrieved token as you would need it in further step.
+
+```
+bot = AgentBot.create!(name: "Botpress Bot", outgoing_url: "https://CHATWOOT_BOTPRESS_BRIDGE_URL/chatwoot/webhook")
+bot.access_token.token
+```
+
+Connect Agent Bot to your inbox by running the following command
+
+```
+inbox = Inbox.last
+AgentBotInbox.create!(inbox: inbox, agent_bot: bot)
+```
+
+
+
+# Deploy CapRover
+
+1 - Create new app
+<img src=".github/images/create-app.png" width="100%" alt=""/>
+
+2 - Configure env vars
+
+RAILS_ENV=production
+CHATWOOT_ENDPOINT=
+CHATWOOT_BOT_TOKEN=
+BOTPRESS_ENDPOINT=
+BOTPRESS_BOT_ID=
+SECRET_KEY_BASE=
+
+Generate random SECRET_KEY_BASE with
+```
+rake secret
+```
+
+<img src=".github/images/configure-env-vars.png" width="100%" alt=""/>
+
+3 - Configure http port
+In http settings set `Container HTTP Port` to `3000`
+<img src=".github/images/http-port.png" width="100%" alt=""/>
+
+4 - Deploy container
+In deployment settings set `Deploy via ImageName` with `douglara/chatwoot-botpress-bridge:latest` and deploy now.
+<img src=".github/images/deploy.png" width="100%" alt=""/>
