@@ -2,6 +2,9 @@
 
 This is a bridge connection chatwoot botpress.
 
+[Chatwoot](https://github.com/chatwoot/chatwoot)
+[Botpress](https://github.com/botpress/botpress)
+
 # Running local
 
 You need `ruby 3.0.3`
@@ -68,12 +71,14 @@ AgentBotInbox.create!(inbox: inbox, agent_bot: bot)
 
 2 - Configure env vars
 
+```
 RAILS_ENV=production
 CHATWOOT_ENDPOINT=
 CHATWOOT_BOT_TOKEN=
 BOTPRESS_ENDPOINT=
 BOTPRESS_BOT_ID=
 SECRET_KEY_BASE=
+```
 
 Generate random SECRET_KEY_BASE with
 ```
