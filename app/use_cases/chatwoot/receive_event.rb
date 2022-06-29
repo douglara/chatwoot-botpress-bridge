@@ -26,6 +26,8 @@ class Chatwoot::ReceiveEvent < Micro::Case
         if result.failure?
           Failure result: { message: 'Error send to chatwoot' }
         end
+
+        sleep(ENV['CHATWOOT_MESSAGES_DELAY'].to_i) if ENV['CHATWOOT_MESSAGES_DELAY']
       end
 
       Success result: botpress_responses.data
