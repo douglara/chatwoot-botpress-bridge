@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ReceiveEventTest < ActionDispatch::IntegrationTest
+class DynamicBotIdTest < ActionDispatch::IntegrationTest
   setup do
     @event = JSON.parse(File.read(Rails.root.to_s + "/test/fixtures/files/new_messae_dynamic_bot_id.json"))
   end
