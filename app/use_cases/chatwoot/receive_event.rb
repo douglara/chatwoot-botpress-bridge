@@ -25,7 +25,7 @@ class Chatwoot::ReceiveEvent < Micro::Case
       account_id = event['account']['id']
       conversation_id = event['conversation']['id']
       botpress_endpoint = event['botpress_endpoint'] || ENV['BOTPRESS_ENDPOINT']
-      botpress_bot_id = event['botpress_bot_id'] || ENV['BOTPRESS_BOT_ID']
+      botpress_bot_id = Chatwoot::GetDynamicAttribute.call(event: event, attribute: 'botpress_bot_id').data[:attribute]
       chatwoot_endpoint = event['chatwoot_endpoint'] || ENV['CHATWOOT_ENDPOINT']
       chatwoot_bot_token = event['chatwoot_bot_token'] || ENV['CHATWOOT_BOT_TOKEN']
 
@@ -39,7 +39,7 @@ class Chatwoot::ReceiveEvent < Micro::Case
         sleep(ENV['CHATWOOT_MESSAGES_DELAY'].to_i) if ENV['CHATWOOT_MESSAGES_DELAY']
       end
 
-      Success result: botpress_responses.data
+      Success result: { botpress: botpress_responses.data , botpress_bot_id: botpress_bot_id } 
     else
       Failure result: { message: 'Invalid event' }
     end
