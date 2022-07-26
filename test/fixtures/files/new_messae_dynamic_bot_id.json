@@ -1,0 +1,101 @@
+{
+  "account": {
+    "id": 1,
+    "name": "Zimobi"
+  },
+  "additional_attributes": {},
+  "content_attributes": {},
+  "content_type": "text",
+  "content": "teste1",
+  "conversation": {
+    "additional_attributes": {},
+    "can_reply": true,
+    "channel": "Channel::Api",
+    "contact_inbox": {
+      "id": 2,
+      "contact_id": 2,
+      "inbox_id": 1,
+      "source_id": "554196910256@c.us_554197763432@c.us",
+      "created_at": "2022-07-21T10:33:54.437Z",
+      "updated_at": "2022-07-21T10:33:54.437Z",
+      "hmac_verified": false,
+      "pubsub_token": "1EphsoGvL3suhUfLBTgeHeju"
+    },
+    "id": 2,
+    "inbox_id": 1,
+    "messages": [
+      {
+        "id": 23982,
+        "content": "teste1",
+        "account_id": 1,
+        "inbox_id": 1,
+        "conversation_id": 2,
+        "message_type": 0,
+        "created_at": 1658834392,
+        "updated_at": "2022-07-26T11:19:52.145Z",
+        "private": false,
+        "status": "sent",
+        "source_id": null,
+        "content_type": "text",
+        "content_attributes": {},
+        "sender_type": "User",
+        "sender_id": 1,
+        "external_source_ids": {},
+        "additional_attributes": {},
+        "conversation": {
+          "assignee_id": null
+        },
+        "sender": {
+          "id": 1,
+          "name": "Douglas",
+          "available_name": "Douglas",
+          "avatar_url": "https://www.gravatar.com/avatar/3c13e93759686ad198caca42ddb388f7?d=404",
+          "type": "user",
+          "availability_status": null,
+          "thumbnail": "https://www.gravatar.com/avatar/3c13e93759686ad198caca42ddb388f7?d=404"
+        }
+      }
+    ],
+    "meta": {
+      "sender": {
+        "additional_attributes": {},
+        "custom_attributes": {},
+        "email": null,
+        "id": 2,
+        "identifier": "554196910256@c.us",
+        "name": "Douglas Lara",
+        "phone_number": "+554196910256",
+        "thumbnail": "",
+        "type": "contact"
+      },
+      "assignee": null,
+      "hmac_verified": false
+    },
+    "status": "pending",
+    "custom_attributes": {
+      "botpress_bot_id": "olx-principal",
+      "bot_context": "disponivel"
+    },
+    "snoozed_until": null,
+    "unread_count": 0,
+    "agent_last_seen_at": 1658834392,
+    "contact_last_seen_at": 0,
+    "timestamp": 1658834392
+  },
+  "created_at": "2022-07-26T11:19:52.145Z",
+  "id": 23982,
+  "inbox": {
+    "id": 1,
+    "name": "Whats 1                                                                                                                                                                                                                                                                                                                                                                                                              - Ativo"
+  },
+  "message_type": "incoming",
+  "private": false,
+  "sender": {
+    "id": 1,
+    "name": "Douglas",
+    "email": "doug@zimobi.com.br",
+    "type": "user"
+  },
+  "source_id": null,
+  "event": "message_created"
+}
