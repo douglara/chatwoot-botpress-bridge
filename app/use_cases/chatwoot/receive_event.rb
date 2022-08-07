@@ -22,16 +22,12 @@ class Chatwoot::ReceiveEvent < Micro::Case
 
   def process_event(event)
     if Chatwoot::ValidEvent.call(event: event).success?
-      account_id = event['account']['id']
-      conversation_id = event['conversation']['id']
       botpress_endpoint = event['botpress_endpoint'] || ENV['BOTPRESS_ENDPOINT']
       botpress_bot_id = Chatwoot::GetDynamicAttribute.call(event: event, attribute: 'botpress_bot_id').data[:attribute]
-      chatwoot_endpoint = event['chatwoot_endpoint'] || ENV['CHATWOOT_ENDPOINT']
-      chatwoot_bot_token = event['chatwoot_bot_token'] || ENV['CHATWOOT_BOT_TOKEN']
 
       botpress_responses = Chatwoot::SendToBotpress.call(event: event, botpress_endpoint: botpress_endpoint, botpress_bot_id: botpress_bot_id)
       botpress_responses.data['responses'].each do | response |
-        result = Chatwoot::SendToChatwoot.call(account_id: account_id, conversation_id: conversation_id, content: response['text'], chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token)
+        result = Chatwoot::SendToChatwoot.call(event: event, botpress_response: response)
         if result.failure?
           Failure result: { message: 'Error send to chatwoot' }
         end
