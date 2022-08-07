@@ -1,34 +1,36 @@
 require 'faraday'
 
 class Chatwoot::SendToChatwoot < Micro::Case
-  attributes :account_id
-  attributes :conversation_id
-  attributes :content
-
-  attributes :chatwoot_endpoint
-  attributes :chatwoot_bot_token
+  attributes :event
+  attribute :botpress_response
 
   def call!
-    url = "#{chatwoot_endpoint}/api/v1/accounts/#{account_id}/conversations/#{conversation_id}/messages"
+    account_id = event['account']['id']
+    conversation_id = event['conversation']['id']
+    chatwoot_endpoint = event['chatwoot_endpoint'] || ENV['CHATWOOT_ENDPOINT']
+    chatwoot_bot_token = event['chatwoot_bot_token'] || ENV['CHATWOOT_BOT_TOKEN']
 
-    body = {
-      'content': content
-    }
-
-    response = Faraday.post(url, body.to_json, 
-      {'Content-Type': 'application/json', 'api_access_token': "#{chatwoot_bot_token}"}
-    )
-
-    if (response.status == 200)
-      Success result: JSON.parse(response.body)
-    elsif (response.status == 404 && response.body.include?('Resource could not be found') )
-      Failure result: { message: 'Chatwoot resource could not be found' }
-    elsif (response.status == 404)
-      Failure result: { message: 'Invalid chatwoot endpoint' }
-    elsif (response.status == 401)
-      Failure result: { message: 'Invalid chatwoot access token' }
+    if botpress_response_choise_options?(botpress_response)
+      return Chatwoot::SendToChatwootRequest.call(
+        account_id: account_id, conversation_id: conversation_id, 
+        chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token,
+        body: build_choise_options_body(botpress_response)
+      )
     else
-      Failure result: { message: 'Chatwoot server error' }
+      return Chatwoot::SendToChatwootRequest.call(
+        account_id: account_id, conversation_id: conversation_id, 
+        chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token,
+        body: { content: botpress_response['content'] }
+      )
     end
+  end
+
+  def botpress_response_choise_options?(botpress_response)
+    botpress_response['state']['context']['queue']['instructions'][0]['fn'].present? rescue false
+  end
+
+  def build_choise_options_body(botpress_response)
+    options_json = JSON.parse(botpress_response['state']['context']['queue']['instructions'][0]['fn'].split('choice_parse_answer ')[1])
+    { content: botpress_response['content'], content_type: 'input_select', content_attributes: { items: options_json['keywords'].map { | option | { title: option[0], value:  option[1][0] } } }  }
   end
 end
