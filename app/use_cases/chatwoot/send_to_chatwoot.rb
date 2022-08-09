@@ -26,11 +26,10 @@ class Chatwoot::SendToChatwoot < Micro::Case
   end
 
   def botpress_response_choise_options?(botpress_response)
-    botpress_response['state']['context']['queue']['instructions'][0]['fn'].present? rescue false
+    botpress_response['type'] == 'single-choice'
   end
 
   def build_choise_options_body(botpress_response)
-    options_json = JSON.parse(botpress_response['state']['context']['queue']['instructions'][0]['fn'].split('choice_parse_answer ')[1])
-    { content: botpress_response['payload']['text'], content_type: 'input_select', content_attributes: { items: options_json['keywords'].map { | option | { title: option[0], value:  option[1][0] } } }  }
+    { content: botpress_response['text'], content_type: 'input_select', content_attributes: { items: botpress_response['choices'].map { | option | { title: option['title'], value:  option['value'] } } }  }
   end
 end
