@@ -12,6 +12,7 @@ class SendToChatwootTest < ActionDispatch::IntegrationTest
     @event = JSON.parse(File.read(Rails.root.to_s + "/test/fixtures/files/new_message.json"))
     @botpress_response = {"type" => "text","workflow" => {},"text" => "Teste ok","markdown" => true,"typing" => true}
     @botpress_response_options = {"type"=>"single-choice", "skill"=>"choice", "workflow"=>{}, "text"=>"teste", "dropdownPlaceholder"=>"Select...", "choices"=>[{"title"=>"Opção 1", "value"=>"Opção 1"}, {"title"=>"Opção 2", "value"=>"Opção 2"}], "markdown"=>true, "typing"=>true}
+    @botpress_response_dropdown = {"type"=>"dropdown", "workflow"=>{}, "message"=>"Mensage... descrição...", "placeholderText"=>"Clique aqui", "options"=>[{"label"=>"Opção 1", "value"=>"Desc 1"}, {"label"=>"Opção 2", "value"=>"Desc 2"}], "displayInKeyboard"=>true, "markdown"=>true, "typing"=>true}
   end
 
   test "success" do
@@ -21,10 +22,17 @@ class SendToChatwootTest < ActionDispatch::IntegrationTest
     assert_equal true, result.success?
   end
 
-  test "options response" do
+  test "options response to buttons" do
     stub_request(:post, Regexp.new(@chatwoot_endpoint)).
     to_return(status: 200, body: '{"id":64325,"content":"Testing","inbox_id":10,"conversation_id":8524,"message_type":1,"content_type":"text","content_attributes":{},"created_at":1656186150,"private":false,"source_id":null,"sender":{"id":3,"name":"Botpress Testing","avatar_url":"","type":"agent_bot"}}', headers: {'Content-Type': 'application/json; charset=utf-8'})
     result = Chatwoot::SendToChatwoot.call(event: @event, botpress_response: @botpress_response_options)
+    assert_equal true, result.success?
+  end
+
+  test "dropdown response to list buttons" do
+    stub_request(:post, Regexp.new(@chatwoot_endpoint)).
+    to_return(status: 200, body: '{"id":64325,"content":"Testing","inbox_id":10,"conversation_id":8524,"message_type":1,"content_type":"text","content_attributes":{},"created_at":1656186150,"private":false,"source_id":null,"sender":{"id":3,"name":"Botpress Testing","avatar_url":"","type":"agent_bot"}}', headers: {'Content-Type': 'application/json; charset=utf-8'})
+    result = Chatwoot::SendToChatwoot.call(event: @event, botpress_response: @botpress_response_dropdown)
     assert_equal true, result.success?
   end
 
