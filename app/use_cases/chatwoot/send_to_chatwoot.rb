@@ -59,7 +59,7 @@ class Chatwoot::SendToChatwoot < Micro::Case
         'buttonText': "#{botpress_response['dropdownPlaceholder']}",
         'description': "#{botpress_response['text']}",
         'sections': [{
-          "rows": botpress_response['choices'].map { | option | { rowId: option['title'], title: option['title'], description: option['value'] } }
+          "rows": botpress_response['choices'].map { | option | { rowId: option['value'], title: option['value'], description: option['title'] } }
         }]
       }
     }
