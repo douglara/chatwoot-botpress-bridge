@@ -12,7 +12,7 @@ class SendToChatwootTest < ActionDispatch::IntegrationTest
     @event = JSON.parse(File.read(Rails.root.to_s + "/test/fixtures/files/new_message.json"))
     @botpress_response = {"type" => "text","workflow" => {},"text" => "Teste ok","markdown" => true,"typing" => true}
     @botpress_response_options = {"type"=>"single-choice", "skill"=>"choice", "workflow"=>{}, "text"=>"teste", "dropdownPlaceholder"=>"Select...", "choices"=>[{"title"=>"Opção 1", "value"=>"Opção 1"}, {"title"=>"Opção 2", "value"=>"Opção 2"}], "markdown"=>true, "typing"=>true}
-    @botpress_response_dropdown = {"type"=>"dropdown", "workflow"=>{}, "message"=>"Mensage... descrição...", "placeholderText"=>"Clique aqui", "options"=>[{"label"=>"Opção 1", "value"=>"Desc 1"}, {"label"=>"Opção 2", "value"=>"Desc 2"}], "displayInKeyboard"=>true, "markdown"=>true, "typing"=>true}
+    @botpress_response_dropdown = {"type" => "single-choice","skill" => "choice","workflow" => {},"text" => "Selecione uma das opções para eu entender melhor como posso te ajudar 😀","isDropdown" => true,"dropdownPlaceholder" => "Select...","choices" => [{"title" => "Doar notas fiscais","value"=> "Doar notas fiscais"},{"title"=> "Minhas doações","value"=> "Minhas doações"},{"title"=> "Outros assuntos","value"=> "Outros assuntos"},{"title"=> "Sobre o projeto","value"=> "Sobre o projeto"}],"markdown"=> true}
   end
 
   test "success" do
