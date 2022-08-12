@@ -24,14 +24,14 @@ class SendToChatwootTest < ActionDispatch::IntegrationTest
 
   test "options response to buttons" do
     stub_request(:post, Regexp.new(@chatwoot_endpoint)).
-    to_return(status: 200, body: '{"id":64325,"content":"Testing","inbox_id":10,"conversation_id":8524,"message_type":1,"content_type":"text","content_attributes":{},"created_at":1656186150,"private":false,"source_id":null,"sender":{"id":3,"name":"Botpress Testing","avatar_url":"","type":"agent_bot"}}', headers: {'Content-Type': 'application/json; charset=utf-8'})
+    to_return(status: 200, body: '{"id":344,"content":"teste","inbox_id":1,"conversation_id":1,"message_type":1,"content_type":"text","content_attributes":{},"created_at":1660326206,"private":false,"source_id":null,"sender":{"id":1,"name":"Botpress Bot","avatar_url":"","type":"agent_bot"}}', headers: {'Content-Type': 'application/json; charset=utf-8'})
     result = Chatwoot::SendToChatwoot.call(event: @event, botpress_response: @botpress_response_options)
     assert_equal true, result.success?
   end
 
   test "dropdown response to list buttons" do
     stub_request(:post, Regexp.new(@chatwoot_endpoint)).
-    to_return(status: 200, body: '{"id":64325,"content":"Testing","inbox_id":10,"conversation_id":8524,"message_type":1,"content_type":"text","content_attributes":{},"created_at":1656186150,"private":false,"source_id":null,"sender":{"id":3,"name":"Botpress Testing","avatar_url":"","type":"agent_bot"}}', headers: {'Content-Type': 'application/json; charset=utf-8'})
+    to_return(status: 200, body: '{"id":346,"content":"Mensage... descrição...","inbox_id":1,"conversation_id":1,"message_type":1,"content_type":"text","content_attributes":{},"created_at":1660327179,"private":false,"source_id":null,"sender":{"id":1,"name":"Botpress Bot","avatar_url":"","type":"agent_bot"}}', headers: {'Content-Type': 'application/json; charset=utf-8'})
     result = Chatwoot::SendToChatwoot.call(event: @event, botpress_response: @botpress_response_dropdown)
     assert_equal true, result.success?
   end
