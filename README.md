@@ -92,5 +92,5 @@ In http settings set `Container HTTP Port` to `3000`
 <img src=".github/images/http-port.png" width="100%" alt=""/>
 
 4 - Deploy container
-In deployment settings set `Deploy via ImageName` with `douglara/chatwoot-botpress-bridge:latest` and deploy now.
+In deployment settings set `Deploy via ImageName` with `douglara/chatwoot-botpress-bridge:0` and deploy now.
 <img src=".github/images/deploy.png" width="100%" alt=""/>
