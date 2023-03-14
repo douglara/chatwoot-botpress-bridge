@@ -94,3 +94,13 @@ In http settings set `Container HTTP Port` to `3000`
 4 - Deploy container
 In deployment settings set `Deploy via ImageName` with `douglara/chatwoot-botpress-bridge:1` and deploy now.
 <img src=".github/images/deploy.png" width="100%" alt=""/>
+
+
+# Community to help
+
+Telegram: https://t.me/chatwoot_botpress_bridge
+
+# Articles
+
+- Subindo um ambiente de desenvolvimento de Chatbot poderoso e open source:
+https://www.linkedin.com/pulse/subindo-um-ambiente-de-desenvolvimento-chatbot-poderoso-douglas-lara/
