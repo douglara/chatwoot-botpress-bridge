@@ -27,6 +27,12 @@ CHATWOOT_ENDPOINT=
 CHATWOOT_BOT_TOKEN=
 ```
 
+Install dependencies
+```sh
+bundle install
+```
+
+
 Start server:
 ```sh
 rails s
