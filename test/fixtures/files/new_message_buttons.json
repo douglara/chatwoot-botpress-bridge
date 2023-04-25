@@ -1,0 +1,244 @@
+{
+  "account": {
+    "id": 1,
+    "name": "Softpower"
+  },
+  "additional_attributes": {},
+  "content_attributes": {},
+  "content_type": "text",
+  "content": "oi",
+  "conversation": {
+    "additional_attributes": {},
+    "can_reply": true,
+    "channel": "Channel::Whatsapp",
+    "contact_inbox": {
+      "id": 59371,
+      "contact_id": 11831,
+      "inbox_id": 143,
+      "source_id": "554196910256",
+      "created_at": "2023-02-12T22:46:03.348Z",
+      "updated_at": "2023-02-12T22:46:03.348Z",
+      "hmac_verified": false,
+      "pubsub_token": "[FILTERED]"
+    },
+    "id": 20484,
+    "inbox_id": 143,
+    "messages": [
+      {
+        "id": 1082258,
+        "content": "oi",
+        "account_id": 1,
+        "inbox_id": 143,
+        "conversation_id": 20484,
+        "message_type": 0,
+        "created_at": 1676258046,
+        "updated_at": "2023-02-13T03:14:06.883Z",
+        "private": false,
+        "status": "sent",
+        "source_id": "wamid.HBgMNTU0MTk2OTEwMjU2FQIAEhgUM0VCMENEQTJFQUQyODg2MUIwQjcA",
+        "content_type": "text",
+        "content_attributes": {},
+        "sender_type": "Contact",
+        "sender_id": 11831,
+        "external_source_ids": {},
+        "additional_attributes": {},
+        "conversation": {
+          "assignee_id": null,
+          "unread_count": 2
+        },
+        "sender": {
+          "additional_attributes": {},
+          "custom_attributes": {
+            "pin": null,
+            "cnpj": "72572588000169",
+            "nome": "Douglas teste",
+            "email_de_acesso": null
+          },
+          "email": null,
+          "id": 11831,
+          "identifier": null,
+          "name": "Douglas Lara",
+          "phone_number": "+554196910256",
+          "thumbnail": "",
+          "type": "contact"
+        }
+      }
+    ],
+    "labels": [],
+    "meta": {
+      "sender": {
+        "additional_attributes": {},
+        "custom_attributes": {
+          "pin": null,
+          "cnpj": "72572588000169",
+          "nome": "Douglas teste",
+          "email_de_acesso": null
+        },
+        "email": null,
+        "id": 11831,
+        "identifier": null,
+        "name": "Douglas Lara",
+        "phone_number": "+554196910256",
+        "thumbnail": "",
+        "type": "contact"
+      },
+      "assignee": null,
+      "team": {
+        "id": 7,
+        "name": "vendas"
+      },
+      "hmac_verified": false
+    },
+    "status": "pending",
+    "custom_attributes": {},
+    "snoozed_until": null,
+    "unread_count": 2,
+    "first_reply_created_at": "2023-02-12T22:46:04.350Z",
+    "agent_last_seen_at": 1676246913,
+    "contact_last_seen_at": 0,
+    "timestamp": 1676258046
+  },
+  "created_at": "2023-02-13T03:14:06.883Z",
+  "id": 1082258,
+  "inbox": {
+    "id": 143,
+    "name": "AtendimentoPrincipal"
+  },
+  "message_type": "incoming",
+  "private": false,
+  "sender": {
+    "id": 11831,
+    "name": "Douglas Lara",
+    "avatar": "",
+    "type": "contact",
+    "account": {
+      "id": 1,
+      "name": "Softpower"
+    }
+  },
+  "source_id": "wamid.HBgMNTU0MTk2OTEwMjU2FQIAEhgUM0VCMENEQTJFQUQyODg2MUIwQjcA",
+  "event": "message_created",
+  "active_buttons": true,
+  "chatwoot_admin_token": "YvzsnNxfKRb4nT3Nia6aeoV2",
+  "chatwoot": {
+    "account": {
+      "id": 1,
+      "name": "Softpower"
+    },
+    "additional_attributes": {},
+    "content_attributes": {},
+    "content_type": "text",
+    "content": "oi",
+    "conversation": {
+      "additional_attributes": {},
+      "can_reply": true,
+      "channel": "Channel::Whatsapp",
+      "contact_inbox": {
+        "id": 59371,
+        "contact_id": 11831,
+        "inbox_id": 143,
+        "source_id": "554196910256",
+        "created_at": "2023-02-12T22:46:03.348Z",
+        "updated_at": "2023-02-12T22:46:03.348Z",
+        "hmac_verified": false,
+        "pubsub_token": "[FILTERED]"
+      },
+      "id": 20484,
+      "inbox_id": 143,
+      "messages": [
+        {
+          "id": 1082258,
+          "content": "oi",
+          "account_id": 1,
+          "inbox_id": 143,
+          "conversation_id": 20484,
+          "message_type": 0,
+          "created_at": 1676258046,
+          "updated_at": "2023-02-13T03:14:06.883Z",
+          "private": false,
+          "status": "sent",
+          "source_id": "wamid.HBgMNTU0MTk2OTEwMjU2FQIAEhgUM0VCMENEQTJFQUQyODg2MUIwQjcA",
+          "content_type": "text",
+          "content_attributes": {},
+          "sender_type": "Contact",
+          "sender_id": 11831,
+          "external_source_ids": {},
+          "additional_attributes": {},
+          "conversation": {
+            "assignee_id": null,
+            "unread_count": 2
+          },
+          "sender": {
+            "additional_attributes": {},
+            "custom_attributes": {
+              "pin": null,
+              "cnpj": "72572588000169",
+              "nome": "Douglas teste",
+              "email_de_acesso": null
+            },
+            "email": null,
+            "id": 11831,
+            "identifier": null,
+            "name": "Douglas Lara",
+            "phone_number": "+554196910256",
+            "thumbnail": "",
+            "type": "contact"
+          }
+        }
+      ],
+      "labels": [],
+      "meta": {
+        "sender": {
+          "additional_attributes": {},
+          "custom_attributes": {
+            "pin": null,
+            "cnpj": "72572588000169",
+            "nome": "Douglas teste",
+            "email_de_acesso": null
+          },
+          "email": null,
+          "id": 11831,
+          "identifier": null,
+          "name": "Douglas Lara",
+          "phone_number": "+554196910256",
+          "thumbnail": "",
+          "type": "contact"
+        },
+        "assignee": null,
+        "team": {
+          "id": 7,
+          "name": "vendas"
+        },
+        "hmac_verified": false
+      },
+      "status": "pending",
+      "custom_attributes": {},
+      "snoozed_until": null,
+      "unread_count": 2,
+      "first_reply_created_at": "2023-02-12T22:46:04.350Z",
+      "agent_last_seen_at": 1676246913,
+      "contact_last_seen_at": 0,
+      "timestamp": 1676258046
+    },
+    "created_at": "2023-02-13T03:14:06.883Z",
+    "id": 1082258,
+    "inbox": {
+      "id": 143,
+      "name": "AtendimentoPrincipal"
+    },
+    "message_type": "incoming",
+    "private": false,
+    "sender": {
+      "id": 11831,
+      "name": "Douglas Lara",
+      "avatar": "",
+      "type": "contact",
+      "account": {
+        "id": 1,
+        "name": "Softpower"
+      }
+    },
+    "source_id": "wamid.HBgMNTU0MTk2OTEwMjU2FQIAEhgUM0VCMENEQTJFQUQyODg2MUIwQjcA",
+    "event": "message_created"
+  }
+}
