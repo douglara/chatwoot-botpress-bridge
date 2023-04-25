@@ -15,6 +15,10 @@ class Chatwoot::SendToChatwootRequest < Micro::Case
       {'Content-Type': 'application/json', 'api_access_token': "#{chatwoot_bot_token}"}
     )
 
+    Rails.logger.info("Chatwoot response")
+    Rails.logger.info("Status code: #{response.status}")
+    Rails.logger.info("Body: #{response.body}")
+
     if (response.status == 200)
       Success result: JSON.parse(response.body)
     elsif (response.status == 404 && response.body.include?('Resource could not be found') )
