@@ -2,7 +2,7 @@ require "test_helper"
 
 class ListButtonsTest < ActionDispatch::IntegrationTest
   setup do
-    @event = JSON.parse(File.read(Rails.root.to_s + "/test/fixtures/files/new_message_buttons.json"))
+    @event = JSON.parse(File.read(Rails.root.to_s + "/test/fixtures/files/new_message/cloud_api_buttons.json"))
     @inbox_json = File.read(Rails.root.to_s + "/test/fixtures/files/inbox_with_buttons.json")
   end
 
