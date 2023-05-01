@@ -16,7 +16,7 @@ class ButtonsTest < ActionDispatch::IntegrationTest
     stub_request(:post, 'https://graph.facebook.com/v16.0/101695376189278/messages').
     to_return(status: 200, body: '{"messaging_product":"whatsapp","contacts":[{"input":"554196910256","wa_id":"554196910256"}],"messages":[{"id":"wamid.HBgMNTU0MTk2OTEwMjU2FQIAERgSMEZERjkxNzM0Rjg0QTIyNkU5AA=="}]}', headers: {'Content-Type': 'application/json; charset=utf-8'})
 
-    result = Chatwoot::ReceiveEvent.call(event: @event)
+    result = Flow::Run.call(chatwoot_webhook: @event)
     assert_equal true, result.success?
   end
 
@@ -30,7 +30,7 @@ class ButtonsTest < ActionDispatch::IntegrationTest
     stub_request(:post, 'https://graph.facebook.com/v16.0/101695376189278/messages').
     to_return(status: 200, body: '{"messaging_product":"whatsapp","contacts":[{"input":"554196910256","wa_id":"554196910256"}],"messages":[{"id":"wamid.HBgMNTU0MTk2OTEwMjU2FQIAERgSMEQ3NjM0NDQ0Q0IxQkRDQkFEAA=="}]}', headers: {'Content-Type': 'application/json; charset=utf-8'})
 
-    result = Chatwoot::ReceiveEvent.call(event: @event)
+    result = Flow::Run.call(chatwoot_webhook: @event)
     assert_equal true, result.success?
   end
 
@@ -44,7 +44,7 @@ class ButtonsTest < ActionDispatch::IntegrationTest
     stub_request(:post, 'https://graph.facebook.com/v16.0/101695376189278/messages').
     to_return(status: 200, body: '{"messaging_product":"whatsapp","contacts":[{"input":"554196910256","wa_id":"554196910256"}],"messages":[{"id":"wamid.HBgMNTU0MTk2OTEwMjU2FQIAERgSMDg5NEUxNjlCREQwRjk3RkNGAA=="}]}', headers: {'Content-Type': 'application/json; charset=utf-8'})
 
-    result = Chatwoot::ReceiveEvent.call(event: @event)
+    result = Flow::Run.call(chatwoot_webhook: @event)
     assert_equal true, result.success?
   end
 
@@ -58,12 +58,12 @@ class ButtonsTest < ActionDispatch::IntegrationTest
     stub_request(:post, 'https://graph.facebook.com/v16.0/101695376189278/messages').
     to_return(status: 500, body: '{"error":{"message":"(#131009) Parameter value is not valid","type":"OAuthException","code":131009,"error_data":{"messaging_product":"whatsapp","details":"Invalid buttons count. Min allowed buttons: 1, Max allowed buttons: 3"},"fbtrace_id":"A-f5QU-ZzIztYQ6QAuziCFW"}}', headers: {'Content-Type': 'application/json; charset=utf-8'})
 
-    result = Chatwoot::ReceiveEvent.call(event: @event)
+    result = Flow::Run.call(chatwoot_webhook: @event)
     assert_equal true, result.success?
   end
 
   test "invalid event" do
-    result = Chatwoot::ReceiveEvent.call(event: {})
+    result = Flow::Run.call(chatwoot_webhook: {})
     assert_equal true, result.failure?
   end
 end

@@ -1,6 +1,6 @@
 require 'faraday'
 
-class Chatwoot::SendToChatwootRequest < Micro::Case
+class Chatwoot::SendReplyToChatwoot::Request < Micro::Case
   attributes :account_id
   attributes :conversation_id
   attribute :body

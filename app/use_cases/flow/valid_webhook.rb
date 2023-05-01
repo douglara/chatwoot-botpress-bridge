@@ -1,15 +1,15 @@
 require 'faraday'
 
-class Chatwoot::ValidEvent < Micro::Case
-  attributes :event
+class Flow::ValidWebhook < Micro::Case
+  attributes :chatwoot_webhook
 
   def call!
     if ( 
-      event['event'] == 'message_created' &&
-      event['message_type'] == 'incoming' &&
-      valid_status?(event['conversation']['status'])
+      chatwoot_webhook['event'] == 'message_created' &&
+      chatwoot_webhook['message_type'] == 'incoming' &&
+      valid_status?(chatwoot_webhook['conversation']['status'])
     )
-      Success result: {event: event}
+      Success result: {chatwoot_webhook: chatwoot_webhook}
     else
       Failure result: { message: 'Invalid event' }
     end

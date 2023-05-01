@@ -6,14 +6,14 @@ class ReceiveEventTest < ActionDispatch::IntegrationTest
   end
 
   test "valid event" do
-    result = Chatwoot::ValidEvent.call(event: @event).success?
+    result = Flow::ValidWebhook.call(chatwoot_webhook: @event).success?
     assert_equal true, result
   end
 
   test "should not valid event" do
     @event['conversation']['status'] = 'open'
 
-    result = Chatwoot::ValidEvent.call(event: @event).failure?
+    result = Flow::ValidWebhook.call(chatwoot_webhook: @event).failure?
     assert_equal true, result
   end
 
@@ -21,7 +21,7 @@ class ReceiveEventTest < ActionDispatch::IntegrationTest
     mock_env('CHATWOOT_ALLOWED_STATUSES' => 'open') do
       @event['conversation']['status'] = 'open'
 
-      result = Chatwoot::ValidEvent.call(event: @event).success?
+      result = Flow::ValidWebhook.call(chatwoot_webhook: @event).success?
       assert_equal true, result
     end
   end

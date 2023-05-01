@@ -1,0 +1,1080 @@
+{
+  "id": 143,
+  "avatar_url": "",
+  "channel_id": 52,
+  "name": "AtendimentoPrincipal",
+  "channel_type": "Channel::Whatsapp",
+  "greeting_enabled": false,
+  "greeting_message": null,
+  "working_hours_enabled": false,
+  "enable_email_collect": true,
+  "csat_survey_enabled": false,
+  "enable_auto_assignment": false,
+  "auto_assignment_config": {
+    "max_assignment_limit": null
+  },
+  "out_of_office_message": null,
+  "working_hours": [
+    {
+      "day_of_week": 0,
+      "closed_all_day": true,
+      "open_hour": null,
+      "open_minutes": null,
+      "close_hour": null,
+      "close_minutes": null,
+      "open_all_day": false
+    },
+    {
+      "day_of_week": 1,
+      "closed_all_day": false,
+      "open_hour": 9,
+      "open_minutes": 0,
+      "close_hour": 17,
+      "close_minutes": 0,
+      "open_all_day": false
+    },
+    {
+      "day_of_week": 2,
+      "closed_all_day": false,
+      "open_hour": 9,
+      "open_minutes": 0,
+      "close_hour": 17,
+      "close_minutes": 0,
+      "open_all_day": false
+    },
+    {
+      "day_of_week": 3,
+      "closed_all_day": false,
+      "open_hour": 9,
+      "open_minutes": 0,
+      "close_hour": 17,
+      "close_minutes": 0,
+      "open_all_day": false
+    },
+    {
+      "day_of_week": 4,
+      "closed_all_day": false,
+      "open_hour": 9,
+      "open_minutes": 0,
+      "close_hour": 17,
+      "close_minutes": 0,
+      "open_all_day": false
+    },
+    {
+      "day_of_week": 5,
+      "closed_all_day": false,
+      "open_hour": 9,
+      "open_minutes": 0,
+      "close_hour": 17,
+      "close_minutes": 0,
+      "open_all_day": false
+    },
+    {
+      "day_of_week": 6,
+      "closed_all_day": true,
+      "open_hour": null,
+      "open_minutes": null,
+      "close_hour": null,
+      "close_minutes": null,
+      "open_all_day": false
+    }
+  ],
+  "timezone": "UTC",
+  "callback_webhook_url": "https://chat.chatbot.net.br/webhooks/whatsapp/+558381419136",
+  "allow_messages_after_resolved": true,
+  "lock_to_single_conversation": false,
+  "widget_color": null,
+  "website_url": null,
+  "hmac_mandatory": null,
+  "welcome_title": null,
+  "welcome_tagline": null,
+  "web_widget_script": null,
+  "website_token": null,
+  "selected_feature_flags": null,
+  "reply_time": null,
+  "messaging_service_sid": null,
+  "phone_number": "+558381419136",
+  "provider": "whatsapp_cloud",
+  "message_templates": [
+    {
+      "id": "845361313223452",
+      "name": "softpower_notifica_fatura_vencendo_hoje",
+      "status": "APPROVED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Olá, *{{1}}*😉!\n\nTudo bem? Estou passando para lembrar do vencimento de sua assinatura, que ocorre em 📅 *{{2}}*.\n\n*Vencendo HOJE*\n\n🔴 *Status da Fatura:* Em aberto\n\n*Evite reduções do serviço realizando o pagamento em {{2}}*\n\nEquipe SoftPower 💙",
+          "type": "BODY",
+          "example": {
+            "body_text": [
+              [
+                "Pedro",
+                "10/01/2023"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "3301339456771938",
+      "name": "esta_por_ai",
+      "status": "APPROVED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Oi {{1}}, você está por ai?",
+          "type": "BODY",
+          "example": {
+            "body_text": [
+              [
+                "Pedro"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "text": "Sim",
+              "type": "QUICK_REPLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "626286102591809",
+      "name": "iniciar_o_atendimento_rapido",
+      "status": "REJECTED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Oi {{1}}, tudo bem?",
+          "type": "BODY",
+          "example": {
+            "body_text": [
+              [
+                "Pedro"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "text": "Sim!!!",
+              "type": "QUICK_REPLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "729840502055171",
+      "name": "softpower_notifica_produto_pronto",
+      "status": "APPROVED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Olá, *{{1}}*\n\nTudo bem?, passando para te avisar que seu produto *{{2}}*, está pronto para uso. ✅\n\nEnviei em seu e-mail {{3}} as suas credenciais de acesso.\n\nAté mais 💙😉\n\nEquipe SoftPower",
+          "type": "BODY"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "url": "https://cliente.softpower.net.br/index.php?rp=%2Flogin",
+              "text": "Painel do Cliente",
+              "type": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1348998732603232",
+      "name": "softpower_notifica_boas_vindas",
+      "status": "APPROVED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Olá, *{{1}}*!\n\n*Seja bem-vindo ao Chatbot uma empresa do grupo Softpower!* 🎉🎉🎉\n\nAgradecemos a preferência em nossos serviços, ficamos contentes com a sua chegada.\n\nO Grupo SoftPower quer sempre manter uma boa comunicação com nossos clientes, estamos disponíveis para dúvidas em horário comercial via WhatsApp  e chat\n\nE 24hrs via ticket, para abrir envie um e-mail para ajuda@softpower.net.br\n\nQualquer dúvida estamos a disposição 😉",
+          "type": "BODY"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "url": "https://cliente.softpower.net.br/index.php?rp=%2Flogin",
+              "text": "Painel do Cliente",
+              "type": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "698768801942260",
+      "name": "softpower_notifica_fatura_aberta",
+      "status": "PENDING",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Olá, *{{1}}* 😉!\n\nTudo bem? estou em contato pois sua assinatura, está atrasada😢, com vencimento em 📆 *{{2}}*, no valor de 💳 *{{3}}*, a mesma está vencida há: *2 dias*\n\nEste comunicado é o 2/2 e redução do produto/serviço ocorre no próximo dia após o aviso 2/2\n\n🔴 Status da Fatura: Em aberto\n\n_Evite redução dos seus serviços, realizando o pagamento em {{2}}._\n\nEquipe SoftPower 💙",
+          "type": "BODY"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "url": "https://cliente.softpower.net.br/clientarea.php?action=invoices",
+              "text": "Acessar Fatura",
+              "type": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1204317827120160",
+      "name": "softpower_notifica_ticket_aberto",
+      "status": "APPROVED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Olá, {{1}}\n\nTudo bem?, recebemos o seu pedido em suporte em nosso painel, o(a) sr(a), poderá acompanhar seu chamado a qualquer momento em seu painel do cliente.\n\n_Ah, e via WhatsApp ainda não é possível adicionar acompanhamentos em seu chamado aberto em seu painel do cliente, nosso time irá lhe atualizar tudo direto por lá._\n\nAté mais \n\nEquipe SoftPower 💙",
+          "type": "BODY"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "url": "https://cliente.softpower.net.br/supporttickets.php",
+              "text": "Consultar Ticket",
+              "type": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "593441912600419",
+      "name": "sofpower_notifica_fatura_paga",
+      "status": "APPROVED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Olá, *{{1}}*😉! \n\nTudo bem?, estou passando para te avisar que o nosso sistema acabou de identificar o pagamento da sua assinatura, se você tem mais de um serviço ativo em datas diferentes acesse o link abaixo e certifique que não tem nenhuma outra em aberto.\n\n✅ *Status da fatura*: Pago\n\nQualquer eventualidade, estamos a disposição.\n\nEquipe SoftPower 💙",
+          "type": "BODY"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "url": "https://cliente.softpower.net.br/clientarea.php?action=invoices",
+              "text": "Acessar Faturas",
+              "type": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1449738922099351",
+      "name": "softpower_notifica_fatura_a_vencer",
+      "status": "APPROVED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Olá, *{{1}}*😉!\n\nTudo bem? Estou passando para lembrar do vencimento de sua assinatura, que ocorre em 📅 *{{2}}*.\n\n🔴 *Status da Fatura:* Em aberto\n\n*Evite reduções do serviço realizando o pagamento em {{2}}*\n\nEquipe SoftPower 💙",
+          "type": "BODY"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "url": "https://cliente.softpower.net.br/clientarea.php?action=invoices",
+              "text": "Acessar Fatura",
+              "type": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "731884054942782",
+      "name": "softpower_notifica_servico_reduzido",
+      "status": "APPROVED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Olá, *{{1}}* 😉! \n\nTudo bem, estou passando para informar que *houve redução de serviço* 😢, te enviei mais informações em seu e-mail de cadastro\n\nCaso tenha pago via boleto a compensação ocorre em até 3 dias úteis (Não Recomendado)\n\nQualquer eventualidade, estamos a disposição 🤝🏽\nAté mais 😉💙\n\nEquipe SoftPower",
+          "type": "BODY"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "url": "https://cliente.softpower.net.br/clientarea.php?action=invoices",
+              "text": "Acessar Fatura",
+              "type": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "740048057509148",
+      "name": "softpower_notifica_fatura_vencida_1_dia",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Olá, *{{1}}* 😉!\n\nTudo bem? estou em contato pois sua assinatura, está atrasada😢, com vencimento em 📆 *{{2}}*, no valor de 💳 *{{3}}*, a mesma está vencida há: *1 dia *\n\nEste comunicado é o 1/2 e redução do produto/serviço ocorre no próximo dia após o aviso 2/2.\n\n🔴 Status da Fatura: Vencida\n\n_Evite redução dos seus serviços, realizando o pagamento em {{2}}._\n\nEquipe SoftPower 💙",
+          "type": "BODY"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "url": "https://cliente.softpower.net.br/clientarea.php?action=invoices",
+              "text": "Acessar Fatura",
+              "type": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1420976794975101",
+      "name": "atendimento_inatividade",
+      "status": "APPROVED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Olá! Acredito que esteja ocupado(a) e neste caso estou encerrando esta conversa por falta de interação, caso ainda tenha alguma duvida ou solicitação ser realizada peço que entre em contato novamente para realizarmos um novo atendimento, minha equipe e eu ficamos a disposição!\n\nAté mais 💙💙",
+          "type": "BODY"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "text": "Iniciar novo Atendimento",
+              "type": "QUICK_REPLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "710047657332887",
+      "name": "envio_de_cobranca",
+      "status": "APPROVED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Olá, *{{1}}*\n\nTudo bem com o senhor(a)?\n\nEstou em contato pois o nosso sistema *não identificou o pagamento da fatura com vencimento em {{2}}*, houve algum problema com o método de pagamento escolhido?",
+          "type": "BODY"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "text": "Sim!!!",
+              "type": "QUICK_REPLY"
+            },
+            {
+              "text": "Não!!!",
+              "type": "QUICK_REPLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "507569371465008",
+      "name": "softpower_notifica_whmcs",
+      "status": "APPROVED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "*[MENSAGEM AUTOMÁTICA]*\n\n{{1}}\n\nEssa mensagem foi enviada através do nosso painel do cliente.",
+          "type": "BODY"
+        }
+      ]
+    },
+    {
+      "id": "2811254222352443",
+      "name": "notifica_whmcs",
+      "status": "APPROVED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "*[MENSAGEM AUTOMÁTICA]*\n\n{{1}}\n\nEssa mensagem foi enviada automática de nosso sistema de atendimento.",
+          "type": "BODY",
+          "example": {
+            "body_text": [
+              [
+                "Olá, boa tarde espero que esteja bem, ainda precisa de atendimento?"
+              ]
+            ]
+          }
+        },
+        {
+          "text": "Clique no botão abaixo e abra seu painel do cliente.",
+          "type": "FOOTER"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "url": "https://cliente.softpower.net.br/index.php?rp=%2Flogin",
+              "text": "Painel do Cliente",
+              "type": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1267931730458636",
+      "name": "iniciar_atendimento",
+      "status": "APPROVED",
+      "category": "TRANSACTIONAL",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Olá, *{{1}}* 👋🏽\nMe chamo {{2}}, e faço parte do time de atendimento da *SoftPower BR* 😍💙\n\nClica no botão abaixo para iniciarmos o nosso atendimento.",
+          "type": "BODY",
+          "example": {
+            "body_text": [
+              [
+                "Matheus",
+                "Henrique"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "text": "Iniciar Atendimento!!!",
+              "type": "QUICK_REPLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5740017222719287",
+      "name": "sample_purchase_feedback",
+      "status": "APPROVED",
+      "category": "ISSUE_RESOLUTION",
+      "language": "en_US",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "IMAGE"
+        },
+        {
+          "text": "Thank you for purchasing {{1}}! We value your feedback and would like to learn more about your experience.",
+          "type": "BODY"
+        },
+        {
+          "text": "This message is from an unverified business.",
+          "type": "FOOTER"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "url": "https://www.example.com/",
+              "text": "Take Survey",
+              "type": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "900617521116023",
+      "name": "sample_purchase_feedback",
+      "status": "APPROVED",
+      "category": "ISSUE_RESOLUTION",
+      "language": "es",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "IMAGE"
+        },
+        {
+          "text": "¡Gracias por comprar {{1}}! Valoramos tus comentarios y nos gustaría saber cómo fue tu experiencia.",
+          "type": "BODY"
+        },
+        {
+          "text": "Este mensaje proviene de un negocio no verificado.",
+          "type": "FOOTER"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "url": "https://www.example.com/",
+              "text": "Responder encuesta",
+              "type": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "552971180048243",
+      "name": "sample_purchase_feedback",
+      "status": "APPROVED",
+      "category": "ISSUE_RESOLUTION",
+      "language": "id",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "IMAGE"
+        },
+        {
+          "text": "Terima kasih sudah membeli {{1}}! Kami menghargai masukan Anda dan ingin mempelajari lebih lanjut terkait pengalaman Anda.",
+          "type": "BODY"
+        },
+        {
+          "text": "Pesan ini berasal dari bisnis yang tidak terverifikasi.",
+          "type": "FOOTER"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "url": "https://www.example.com/",
+              "text": "Ikuti survei",
+              "type": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "488934596646392",
+      "name": "sample_purchase_feedback",
+      "status": "APPROVED",
+      "category": "ISSUE_RESOLUTION",
+      "language": "pt_BR",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "IMAGE"
+        },
+        {
+          "text": "Agradecemos a aquisição de {{1}}! Valorizamos seu feedback e gostaríamos de saber mais sobre sua experiência.",
+          "type": "BODY"
+        },
+        {
+          "text": "Esta mensagem é de uma empresa não verificada.",
+          "type": "FOOTER"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "url": "https://www.example.com/",
+              "text": "Responder à pesquisa",
+              "type": "URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5622998287825858",
+      "name": "sample_flight_confirmation",
+      "status": "APPROVED",
+      "category": "TICKET_UPDATE",
+      "language": "id",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "DOCUMENT"
+        },
+        {
+          "text": "Ini merupakan konfirmasi penerbangan Anda untuk {{1}}-{{2}} di {{3}}.",
+          "type": "BODY"
+        },
+        {
+          "text": "Pesan ini berasal dari bisnis yang tidak terverifikasi.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "5405521926219103",
+      "name": "sample_flight_confirmation",
+      "status": "APPROVED",
+      "category": "TICKET_UPDATE",
+      "language": "pt_BR",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "DOCUMENT"
+        },
+        {
+          "text": "Esta é a sua confirmação de voo para {{1}}-{{2}} em {{3}}.",
+          "type": "BODY"
+        },
+        {
+          "text": "Esta mensagem é de uma empresa não verificada.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "1408298139708407",
+      "name": "sample_flight_confirmation",
+      "status": "APPROVED",
+      "category": "TICKET_UPDATE",
+      "language": "en_US",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "DOCUMENT"
+        },
+        {
+          "text": "This is your flight confirmation for {{1}}-{{2}} on {{3}}.",
+          "type": "BODY"
+        },
+        {
+          "text": "This message is from an unverified business.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "592956789332873",
+      "name": "sample_flight_confirmation",
+      "status": "APPROVED",
+      "category": "TICKET_UPDATE",
+      "language": "es",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "DOCUMENT"
+        },
+        {
+          "text": "Confirmamos tu vuelo a {{1}}-{{2}} para el {{3}}.",
+          "type": "BODY"
+        },
+        {
+          "text": "Este mensaje proviene de un negocio no verificado.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "2292738160885806",
+      "name": "sample_issue_resolution",
+      "status": "APPROVED",
+      "category": "ISSUE_RESOLUTION",
+      "language": "id",
+      "components": [
+        {
+          "text": "Halo {{1}}, apakah kami bisa mengatasi masalah yang sedang Anda hadapi?",
+          "type": "BODY"
+        },
+        {
+          "text": "Pesan ini berasal dari bisnis yang tidak terverifikasi.",
+          "type": "FOOTER"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "text": "Ya",
+              "type": "QUICK_REPLY"
+            },
+            {
+              "text": "Tidak",
+              "type": "QUICK_REPLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1592534644598843",
+      "name": "sample_issue_resolution",
+      "status": "APPROVED",
+      "category": "ISSUE_RESOLUTION",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Oi, {{1}}. Nós conseguimos resolver o problema que você estava enfrentando?",
+          "type": "BODY"
+        },
+        {
+          "text": "Esta mensagem é de uma empresa não verificada.",
+          "type": "FOOTER"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "text": "Sim",
+              "type": "QUICK_REPLY"
+            },
+            {
+              "text": "Não",
+              "type": "QUICK_REPLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "572190564428630",
+      "name": "sample_issue_resolution",
+      "status": "APPROVED",
+      "category": "ISSUE_RESOLUTION",
+      "language": "es",
+      "components": [
+        {
+          "text": "Hola, {{1}}. ¿Pudiste solucionar el problema que tenías?",
+          "type": "BODY"
+        },
+        {
+          "text": "Este mensaje proviene de un negocio no verificado.",
+          "type": "FOOTER"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "text": "Sí",
+              "type": "QUICK_REPLY"
+            },
+            {
+              "text": "No",
+              "type": "QUICK_REPLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "469251335423889",
+      "name": "sample_issue_resolution",
+      "status": "APPROVED",
+      "category": "ISSUE_RESOLUTION",
+      "language": "en_US",
+      "components": [
+        {
+          "text": "Hi {{1}}, were we able to solve the issue that you were facing?",
+          "type": "BODY"
+        },
+        {
+          "text": "This message is from an unverified business.",
+          "type": "FOOTER"
+        },
+        {
+          "type": "BUTTONS",
+          "buttons": [
+            {
+              "text": "Yes",
+              "type": "QUICK_REPLY"
+            },
+            {
+              "text": "No",
+              "type": "QUICK_REPLY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1317683012345936",
+      "name": "sample_happy_hour_announcement",
+      "status": "APPROVED",
+      "category": "APPOINTMENT_UPDATE",
+      "language": "en_US",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "VIDEO"
+        },
+        {
+          "text": "Happy hour is here! 🍺😀🍸\nPlease be merry and enjoy the day. 🎉\nVenue: {{1}}\nTime: {{2}}",
+          "type": "BODY"
+        },
+        {
+          "text": "This message is from an unverified business.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "955302138780910",
+      "name": "sample_happy_hour_announcement",
+      "status": "APPROVED",
+      "category": "APPOINTMENT_UPDATE",
+      "language": "pt_BR",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "VIDEO"
+        },
+        {
+          "text": "O happy hour chegou! 🍺😀🍸\nSeja feliz e aproveite o dia. 🎉\nLocal: {{1}}\nHorário: {{2}}",
+          "type": "BODY"
+        },
+        {
+          "text": "Esta mensagem é de uma empresa não verificada.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "570880724930195",
+      "name": "sample_happy_hour_announcement",
+      "status": "APPROVED",
+      "category": "APPOINTMENT_UPDATE",
+      "language": "es",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "VIDEO"
+        },
+        {
+          "text": "¡Llegó el happy hour! 🍺😀🍸\nA divertirse y disfrutar. 🎉\nLugar: {{1}}\nHora: {{2}}",
+          "type": "BODY"
+        },
+        {
+          "text": "Este mensaje proviene de un negocio no verificado.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "566663998701879",
+      "name": "sample_happy_hour_announcement",
+      "status": "APPROVED",
+      "category": "APPOINTMENT_UPDATE",
+      "language": "id",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "VIDEO"
+        },
+        {
+          "text": "Jam diskon telah tiba! 🍺😀🍸\nBergembiralah dan nikmati hari Anda. 🎉\nTempat: {{1}}\nWaktu: {{2}}",
+          "type": "BODY"
+        },
+        {
+          "text": "Pesan ini berasal dari bisnis yang tidak terverifikasi.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "1251190045756150",
+      "name": "sample_movie_ticket_confirmation",
+      "status": "APPROVED",
+      "category": "TICKET_UPDATE",
+      "language": "en_US",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "IMAGE"
+        },
+        {
+          "text": "Your ticket for *{{1}}*\n*Time* - {{2}}\n*Venue* - {{3}}\n*Seats* - {{4}}",
+          "type": "BODY"
+        },
+        {
+          "text": "This message is from an unverified business.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "1135731830453551",
+      "name": "sample_movie_ticket_confirmation",
+      "status": "APPROVED",
+      "category": "TICKET_UPDATE",
+      "language": "id",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "IMAGE"
+        },
+        {
+          "text": "Tiket Anda untuk *{{1}}*\n*Waktu* - {{2}}\n*Tempat* - {{3}}\n*Kursi* - {{4}}",
+          "type": "BODY"
+        },
+        {
+          "text": "Pesan ini berasal dari bisnis yang tidak terverifikasi.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "1112073356131745",
+      "name": "sample_movie_ticket_confirmation",
+      "status": "APPROVED",
+      "category": "TICKET_UPDATE",
+      "language": "es",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "IMAGE"
+        },
+        {
+          "text": "Tu entrada para *{{1}}*\n*Hora* - {{2}}\n*Lugar* - {{3}}\n*Asientos* - {{4}}",
+          "type": "BODY"
+        },
+        {
+          "text": "Este mensaje proviene de un negocio no verificado.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "608433597958979",
+      "name": "sample_movie_ticket_confirmation",
+      "status": "APPROVED",
+      "category": "TICKET_UPDATE",
+      "language": "pt_BR",
+      "components": [
+        {
+          "type": "HEADER",
+          "format": "IMAGE"
+        },
+        {
+          "text": "Seu ingresso para *{{1}}*\n*Horário* - {{2}}\n*Local* - {{3}}\n*Assentos* - {{4}}",
+          "type": "BODY"
+        },
+        {
+          "text": "Esta mensagem é de uma empresa não verificada.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "1201644980745876",
+      "name": "sample_shipping_confirmation",
+      "status": "APPROVED",
+      "category": "SHIPPING_UPDATE",
+      "language": "pt_BR",
+      "components": [
+        {
+          "text": "Seu pacote foi enviado. Ele será entregue em {{1}} dias úteis.",
+          "type": "BODY"
+        },
+        {
+          "text": "Esta mensagem é de uma empresa não verificada.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "1124542411525003",
+      "name": "sample_shipping_confirmation",
+      "status": "APPROVED",
+      "category": "SHIPPING_UPDATE",
+      "language": "es",
+      "components": [
+        {
+          "text": "ó tu paquete. La entrega se realizará en {{1}} dí.",
+          "type": "BODY"
+        },
+        {
+          "text": "Este mensaje proviene de un negocio no verificado.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "948576096526685",
+      "name": "sample_shipping_confirmation",
+      "status": "APPROVED",
+      "category": "SHIPPING_UPDATE",
+      "language": "en_US",
+      "components": [
+        {
+          "text": "Your package has been shipped. It will be delivered in {{1}} business days.",
+          "type": "BODY"
+        },
+        {
+          "text": "This message is from an unverified business.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "700702971758546",
+      "name": "sample_shipping_confirmation",
+      "status": "APPROVED",
+      "category": "SHIPPING_UPDATE",
+      "language": "id",
+      "components": [
+        {
+          "text": "Paket Anda sudah dikirim. Paket akan sampai dalam {{1}} hari kerja.",
+          "type": "BODY"
+        },
+        {
+          "text": "Pesan ini berasal dari bisnis yang tidak terverifikasi.",
+          "type": "FOOTER"
+        }
+      ]
+    },
+    {
+      "id": "492561749625005",
+      "name": "hello_world",
+      "status": "APPROVED",
+      "category": "ACCOUNT_UPDATE",
+      "language": "en_US",
+      "components": [
+        {
+          "text": "Hello World",
+          "type": "HEADER",
+          "format": "TEXT"
+        },
+        {
+          "text": "Welcome and congratulations!! This message demonstrates your ability to send a WhatsApp message notification from the Cloud API, hosted by Meta. Thank you for taking the time to test with us.",
+          "type": "BODY"
+        },
+        {
+          "text": "WhatsApp Business Platform sample message",
+          "type": "FOOTER"
+        }
+      ]
+    }
+  ],
+  "provider_config": {
+    "api_key": "EAAMnWm7EWGwBAF9EXsGAR6LxjFRgAaScM3VcpXuATRoiGChafyVvrUThpmoVic6eSrg3JiIiv3nebUaZBIRe6CwWI56Uy8jvx2iEgEMXawQBTYTixr19kHZA3MZA6e4ZA1VLdkMtXGnIkbZBpBbIXfAtK5wOwmV8MrpPfVEXJqQ9tNWuC2dW8",
+    "phone_number_id": "101695376189278",
+    "business_account_id": "106829218976867",
+    "webhook_verify_token": "4c4a115da769434b429f29879e423a41"
+  }
+}
