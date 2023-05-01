@@ -17,7 +17,7 @@ class ButtonsBodyTest < ActionDispatch::IntegrationTest
     result = Chatwoot::CloudApi::Buttons.call(phone_number_id: phone_number_id, token: token, to: to, botpress_response: botpress_response)
     assert_equal true, result.success?
     body_actions = '{"buttons":[{"type":"reply","reply":{"id":"option_0","title":"Sim"}},{"type":"reply","reply":{"id":"option_1","title":"Não"}}]}'
-    result_body_actions = result[:body][:interactive][:action].to_json.to_s
+    result_body_actions = result[:body_send][:interactive][:action].to_json.to_s
     assert_equal body_actions, result_body_actions
   end
 
@@ -32,7 +32,7 @@ class ButtonsBodyTest < ActionDispatch::IntegrationTest
     result = Chatwoot::CloudApi::Buttons.call(phone_number_id: phone_number_id, token: token, to: to, botpress_response: botpress_response)
     assert_equal true, result.success?
     body_actions = '{"buttons":[{"type":"reply","reply":{"id":"option_0","title":"Large button........"}},{"type":"reply","reply":{"id":"option_1","title":"Não"}},{"type":"reply","reply":{"id":"option_2","title":"Status"}}]}'
-    result_body_actions = result[:body][:interactive][:action].to_json.to_s
+    result_body_actions = result[:body_send][:interactive][:action].to_json.to_s
     assert_equal body_actions, result_body_actions
   end
 
