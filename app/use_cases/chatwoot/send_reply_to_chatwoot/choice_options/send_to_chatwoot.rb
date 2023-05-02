@@ -15,24 +15,14 @@ class Chatwoot::SendReplyToChatwoot::ChoiceOptions::SendToChatwoot < Micro::Case
 
   def handle_choice_options
     if @buttons_active && inbox_is_whatsapp?()
-      if Chatwoot::SendButtonsToCloudApi.call(
+      message = Chatwoot::SendButtonsToCloudApi.call(
         chatwoot_endpoint: @chatwoot_endpoint,
         account_id: @account_id,
         event: event,
         botpress_response: botpress_response
-      ).success?
-        return Chatwoot::SendReplyToChatwoot::Request.call(
-          account_id: @account_id, conversation_id: @conversation_id, 
-          chatwoot_endpoint: @chatwoot_endpoint, chatwoot_bot_token: @chatwoot_bot_token,
-          body: { content: "Enviado botões\n\n#{botpress_response['text']}", private: true }
-        )
-      else
-        return Chatwoot::SendReplyToChatwoot::Request.call(
-          account_id: @account_id, conversation_id: @conversation_id, 
-          chatwoot_endpoint: @chatwoot_endpoint, chatwoot_bot_token: @chatwoot_bot_token,
-          body: { content: "Erro no envio dos botões\n\n#{botpress_response['text']}", private: true }
-        )
-      end
+      ).data
+
+      return Success result: message
     else
       message = Chatwoot::SendReplyToChatwoot::ChoiceOptions::ConvertToText.call(
         botpress_response: botpress_response
