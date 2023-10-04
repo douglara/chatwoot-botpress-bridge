@@ -7,11 +7,17 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore IDE config
+.idea
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
+/temp_files/*
 !/log/.keep
 !/tmp/.keep
+!/temp_files/.keep
+.byebug_history
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
