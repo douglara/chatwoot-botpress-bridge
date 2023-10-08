@@ -108,9 +108,6 @@ GEM
       net-smtp
     marcel (1.0.2)
     method_source (1.0.0)
-    mimemagic (0.4.3)
-      nokogiri (~> 1)
-      rake
     mini_mime (1.1.2)
     minitest (5.18.1)
     msgpack (1.7.1)
@@ -193,7 +190,6 @@ DEPENDENCIES
   debug
   dotenv-rails
   faraday
-  mimemagic
   puma (~> 5.0)
   rails (~> 7.0.3)
   tzinfo-data

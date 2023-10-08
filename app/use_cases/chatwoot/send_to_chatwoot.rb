@@ -1,8 +1,7 @@
-require 'faraday'
-require 'uri'
 require 'net/http'
 require 'openssl'
-require 'mimemagic'
+require 'uri'
+require 'open-uri'
 
 class Chatwoot::SendToChatwoot < Micro::Case
   attributes :event
@@ -15,15 +14,11 @@ class Chatwoot::SendToChatwoot < Micro::Case
     chatwoot_bot_token = event['chatwoot_bot_token'] || ENV['CHATWOOT_BOT_TOKEN']
 
     if response_image?(botpress_response) || response_file?(botpress_response) || response_video?(botpress_response)
-      request_url = "#{chatwoot_endpoint}/api/v1/accounts/#{account_id}/conversations/#{conversation_id}/messages"
-
       file_url = botpress_response['image'] || botpress_response['file'] || botpress_response['video']
-      incoming_file_name = File.basename(file_url)
-      real_file_name = incoming_file_name.sub(/^[^-]+-/, '')
-      file_path = "temp_files/#{real_file_name}"
-      download_file(file_url, file_path)
+      file_name = get_file_name_by_url(file_url)
+      file = download_file(file_url)
 
-      url = URI(request_url)
+      url = URI("#{chatwoot_endpoint}/api/v1/accounts/#{account_id}/conversations/#{conversation_id}/messages")
 
       http = Net::HTTP.new(url.host, url.port)
       http.use_ssl = true
@@ -32,12 +27,9 @@ class Chatwoot::SendToChatwoot < Micro::Case
       request = Net::HTTP::Post.new(url)
       request['api_access_token'] = chatwoot_bot_token
 
-      file = File.open(file_path)
-      file_mime_type = MimeMagic.by_path(file_path)
-
       form_data = [
-        ['attachments[]', file, { content_type: file_mime_type }],
-        ['content', botpress_response['title']]
+        ['content', botpress_response['title']],
+        ['attachments[]', file, { filename: file_name , content_type: file.content_type }]
       ]
 
       request.set_form(form_data, 'multipart/form-data')
@@ -101,9 +93,12 @@ class Chatwoot::SendToChatwoot < Micro::Case
     }
   end
 
-  def download_file(file_url, file_path)
-    file = Faraday.get(file_url).body
+  def download_file(file_url)
+    OpenURI::open_uri(file_url)
+  end
 
-    File.write(file_path, file, mode: 'wb', encoding: 'ASCII-8BIT')
+  def get_file_name_by_url(file_url)
+    incoming_file_name = File.basename(file_url)
+    incoming_file_name.sub(/^[^-]+-/, '')
   end
 end
