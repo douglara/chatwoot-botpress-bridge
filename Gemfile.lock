@@ -71,6 +71,7 @@ GEM
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    byebug (11.1.3)
     concurrent-ruby (1.2.2)
     crack (0.4.5)
       rexml
@@ -185,6 +186,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  byebug
   debug
   dotenv-rails
   faraday
