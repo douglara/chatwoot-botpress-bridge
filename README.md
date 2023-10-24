@@ -7,7 +7,7 @@ This is a bridge connection chatwoot botpress.
 
 # Running local
 
-You need `ruby 3.0.3`
+You need `ruby 3.2.2`
 Clone this project:
 ```sh
 git clone https://github.com/douglara/chatwoot-botpress-bridge.git
