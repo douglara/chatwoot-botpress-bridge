@@ -7,19 +7,6 @@ class Chatwoot::ReceiveEvent < Micro::Case
     process_event(event)
   end
 
-  def valid_event?(event)
-    event['event'] == 'message_created' && event['message_type'] == 'incoming' && valid_status?(event['conversation']['status'])
-  end
-
-  def valid_status?(status)
-    if ENV['CHATWOOT_ALLOWED_STATUSES'].present?
-      allowed_statuses = ENV['CHATWOOT_ALLOWED_STATUSES'].split(',')
-    else
-      allowed_statuses = %w[pending]
-    end
-    allowed_statuses.include?(status)
-  end
-
   def process_event(event)
     if Chatwoot::ValidEvent.call(event: event).success?
       botpress_endpoint = event['botpress_endpoint'] || ENV['BOTPRESS_ENDPOINT']
