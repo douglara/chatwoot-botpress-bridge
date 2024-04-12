@@ -4,12 +4,17 @@ class Chatwoot::ValidEvent < Micro::Case
   attributes :event
 
   def call!
-    if ( 
+    if (
       event['event'] == 'message_created' &&
       event['message_type'] == 'incoming' &&
       valid_status?(event['conversation']['status'])
+    ) || (
+      event['event'] == 'message_updated' &&
+      event['message_type'] == 'outgoing' &&
+      event['content_type'] == 'input_select' &&
+      event['content_attributes']['submitted_values'].respond_to?(:first)
     )
-      Success result: {event: event}
+      Success result: { event: event }
     else
       Failure result: { message: 'Invalid event' }
     end
