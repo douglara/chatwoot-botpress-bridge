@@ -31,6 +31,10 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 gem 'faraday'
 gem 'u-case', '~> 4.5.1'
+gem 'sqlite3', '2.4.1'
+gem "solid_queue", "1.1.0"
+gem "mission_control-jobs"
+gem "propshaft"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -45,4 +49,3 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
