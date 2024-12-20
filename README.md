@@ -7,7 +7,7 @@ This is a bridge connection chatwoot botpress.
 
 # Running local
 
-You need `ruby 3.0.3`
+You need `ruby 3.2.2`
 Clone this project:
 ```sh
 git clone https://github.com/douglara/chatwoot-botpress-bridge.git
@@ -110,3 +110,5 @@ Telegram: https://t.me/chatwoot_botpress_bridge
 
 - Subindo um ambiente de desenvolvimento de Chatbot poderoso e open source:
 https://www.linkedin.com/pulse/subindo-um-ambiente-de-desenvolvimento-chatbot-poderoso-douglas-lara/
+- Chatbot simples de integrar com qualquer API
+https://www.linkedin.com/pulse/chatbot-simples-de-integrar-com-qualquer-api-douglas-lara/

@@ -1,6 +1,6 @@
 require 'faraday'
 
-class Chatwoot::SendToBotpress < Micro::Case
+class Botpress::SendToBotpress < Micro::Case
   attributes :event
   attributes :botpress_endpoint
   attributes :botpress_bot_id
@@ -19,6 +19,11 @@ class Chatwoot::SendToBotpress < Micro::Case
     }
 
     response = Faraday.post(url, body.to_json, {'Content-Type': 'application/json'})
+
+    Rails.logger.info("Botpress response")
+    Rails.logger.info("Status code: #{response.status}")
+    Rails.logger.info("Body: #{response.body}")
+
     if (response.status == 200)
       Success result: JSON.parse(response.body)
     elsif (response.status == 404 && response.body.include?('Invalid Bot ID'))

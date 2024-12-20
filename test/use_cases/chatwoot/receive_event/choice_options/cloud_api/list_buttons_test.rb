@@ -2,7 +2,7 @@ require "test_helper"
 
 class ListButtonsTest < ActionDispatch::IntegrationTest
   setup do
-    @event = JSON.parse(File.read(Rails.root.to_s + "/test/fixtures/files/new_message_buttons.json"))
+    @event = JSON.parse(File.read(Rails.root.to_s + "/test/fixtures/files/new_message/cloud_api_buttons.json"))
     @inbox_json = File.read(Rails.root.to_s + "/test/fixtures/files/inbox_with_buttons.json")
   end
 
@@ -16,7 +16,7 @@ class ListButtonsTest < ActionDispatch::IntegrationTest
     stub_request(:post, 'https://graph.facebook.com/v16.0/101695376189278/messages').
     to_return(status: 200, body: '{"messaging_product":"whatsapp","contacts":[{"input":"554196910256","wa_id":"554196910256"}],"messages":[{"id":"wamid.HBgMNTU0MTk2OTEwMjU2FQIAERgSQ0IwOEMxOThDNTJBQzExNEY0AA=="}]}', headers: {'Content-Type': 'application/json; charset=utf-8'})
 
-    result = Chatwoot::ReceiveEvent.call(event: @event)
+    result = Flow::Run.call(chatwoot_webhook: @event)
     assert_equal true, result.success?
   end
 
@@ -30,7 +30,7 @@ class ListButtonsTest < ActionDispatch::IntegrationTest
     stub_request(:post, 'https://graph.facebook.com/v16.0/101695376189278/messages').
     to_return(status: 200, body: '{"messaging_product":"whatsapp","contacts":[{"input":"554196910256","wa_id":"554196910256"}],"messages":[{"id":"wamid.HBgMNTU0MTk2OTEwMjU2FQIAERgSRTRBNDkwRTMxOTg1OURGMEQ1AA=="}]}', headers: {'Content-Type': 'application/json; charset=utf-8'})
 
-    result = Chatwoot::ReceiveEvent.call(event: @event)
+    result = Flow::Run.call(chatwoot_webhook: @event)
     assert_equal true, result.success?
   end
 
@@ -44,7 +44,7 @@ class ListButtonsTest < ActionDispatch::IntegrationTest
     stub_request(:post, 'https://graph.facebook.com/v16.0/101695376189278/messages').
     to_return(status: 200, body: '{"messaging_product":"whatsapp","contacts":[{"input":"554196910256","wa_id":"554196910256"}],"messages":[{"id":"wamid.HBgMNTU0MTk2OTEwMjU2FQIAERgSQjA1OEVBM0JEMTJENkMwQUYyAA=="}]}', headers: {'Content-Type': 'application/json; charset=utf-8'})
 
-    result = Chatwoot::ReceiveEvent.call(event: @event)
+    result = Flow::Run.call(chatwoot_webhook: @event)
     assert_equal true, result.success?
   end
 
@@ -58,12 +58,12 @@ class ListButtonsTest < ActionDispatch::IntegrationTest
     stub_request(:post, 'https://graph.facebook.com/v16.0/101695376189278/messages').
     to_return(status: 200, body: '{"messaging_product":"whatsapp","contacts":[{"input":"554196910256","wa_id":"554196910256"}],"messages":[{"id":"wamid.HBgMNTU0MTk2OTEwMjU2FQIAERgSRUU5NDdEQUQ2MjRCNDVFNEU3AA=="}]}', headers: {'Content-Type': 'application/json; charset=utf-8'})
 
-    result = Chatwoot::ReceiveEvent.call(event: @event)
+    result = Flow::Run.call(chatwoot_webhook: @event)
     assert_equal true, result.success?
   end
 
   test "invalid event" do
-    result = Chatwoot::ReceiveEvent.call(event: {})
+    result = Flow::Run.call(chatwoot_webhook: {})
     assert_equal true, result.failure?
   end
 end

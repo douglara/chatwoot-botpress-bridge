@@ -1,4 +1,5 @@
 ENV["RAILS_ENV"] ||= "test"
+require_relative "./support/simplecov"
 require_relative "../config/environment"
 require "rails/test_help"
 Dir[File.expand_path("../support/**/*.rb", __FILE__)].each { |rb| require(rb) }
@@ -16,6 +17,17 @@ class ActiveSupport::TestCase
       yield
     ensure
       ENV.replace old
+    end
+  end
+
+  def with_logger_introspection(&block)
+    orig_logger = Rails.logger.dup
+    @logger_output = StringIO.new
+    begin
+      Rails.logger = ActiveSupport::Logger.new(@logger_output)
+      block.call(@logger_output)
+    ensure
+      Rails.logger = orig_logger
     end
   end
 end

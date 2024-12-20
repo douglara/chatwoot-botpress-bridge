@@ -1,4 +1,4 @@
-FROM ruby:3.0.3
+FROM ruby:3.2.2
 
 COPY Gemfile* /tmp/
 WORKDIR /tmp
@@ -12,4 +12,4 @@ WORKDIR $app
 # Copy the main application.
 COPY . ./
 
-CMD bundle exec puma -C config/puma.rb
+CMD ["bin/boot"]

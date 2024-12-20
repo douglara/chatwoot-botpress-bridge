@@ -14,7 +14,7 @@ class Chatwoot::CloudApi::ListButtons < Micro::Case
       body.to_json,
       {'Content-Type': 'application/json', 'Authorization': "Bearer #{token}"}
     )
-    return Success result: { body: JSON.parse(response.body), response: response }
+    return Success result: { body: JSON.parse(response.body), response: response, body_send: body }
   end
 
   def get_list_button_text(choice_title)

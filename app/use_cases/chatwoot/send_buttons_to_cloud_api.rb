@@ -19,14 +19,14 @@ class Chatwoot::SendButtonsToCloudApi < Micro::Case
     end
 
     if response.status == 200
-      return Success result: { body: JSON.parse(response.body), response: response }
+      return Success result: { content: "Enviado botões\n\n#{botpress_response['text']}", private: true }
     else
       Rails.logger.error("Error send buttons")
       Rails.logger.error("Meta response:")
       Rails.logger.error(response.body)
       Rails.logger.error("Event error:")
       Rails.logger.error(event)
-      return Failure result: { body: JSON.parse(response.body), response: response }
+      return Failure result: { content: "Erro no envio dos botões\n\n#{botpress_response['text']}", private: true }
     end
   end
 

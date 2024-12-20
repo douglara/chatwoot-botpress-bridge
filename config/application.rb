@@ -4,7 +4,7 @@ require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
-# require "active_record/railtie"
+require "active_record/railtie"
 # require "active_storage/engine"
 require "action_controller/railtie"
 require "action_mailer/railtie"
@@ -35,5 +35,13 @@ module ChatwootBotpressBridge
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Use a real queuing backend for Active Job (and separate queues per environment).
+    config.active_job.queue_adapter = :solid_queue
+    config.solid_queue.connects_to = { database: { writing: :queue } }
+    # config.active_job.queue_name_prefix = "chatwoot_botpress_bridge_production"
+
+    config.mission_control.jobs.http_basic_auth_enabled = false
+    config.mission_control.jobs.base_controller_class = "AdminController"
   end
 end
