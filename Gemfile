@@ -43,6 +43,8 @@ group :development, :test do
   gem 'vcr'
   gem 'webmock'
   gem 'byebug'
+  gem 'simplecov', '0.17.1', require: false
+  gem 'simplecov_json_formatter', require: false
 end
 
 group :development do

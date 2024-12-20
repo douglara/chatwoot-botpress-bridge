@@ -96,6 +96,7 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    docile (1.4.1)
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
@@ -125,6 +126,7 @@ GEM
     irb (1.14.3)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
+    json (2.9.1)
     kind (5.10.0)
     logger (1.6.3)
     loofah (2.23.1)
@@ -219,6 +221,12 @@ GEM
     rexml (3.2.6)
     ruby2_keywords (0.0.5)
     securerandom (0.4.1)
+    simplecov (0.17.1)
+      docile (~> 1.1)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
+    simplecov_json_formatter (0.1.4)
     solid_queue (1.1.0)
       activejob (>= 7.1)
       activerecord (>= 7.1)
@@ -265,6 +273,8 @@ DEPENDENCIES
   propshaft
   puma (~> 6.0)
   rails (~> 7.1.1)
+  simplecov (= 0.17.1)
+  simplecov_json_formatter
   solid_queue (= 1.1.0)
   sqlite3 (= 2.4.1)
   tzinfo-data
