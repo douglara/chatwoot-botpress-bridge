@@ -10,7 +10,13 @@ class Chatwoot::SendReplyToChatwoot::ConvertToChatwootFormat < Micro::Case
   :botpress_response
 
   def call!
-    if botpress_response_choise_options?(botpress_response)
+    if response_image?(botpress_response) || response_file?(botpress_response) || response_video?(botpress_response)
+      Chatwoot::SendFileToChatwootRequest.call(
+        account_id: account_id, conversation_id: conversation_id,
+        chatwoot_endpoint: chatwoot_endpoint, chatwoot_bot_token: chatwoot_bot_token,
+        botpress_response: botpress_response
+      )
+    elsif botpress_response_choise_options?(botpress_response)
       return Chatwoot::SendReplyToChatwoot::ChoiceOptions::SendToChatwoot.call(event: chatwoot_webhook, botpress_response: botpress_response)
     else
       return handle_text
@@ -23,5 +29,21 @@ class Chatwoot::SendReplyToChatwoot::ConvertToChatwootFormat < Micro::Case
 
   def botpress_response_choise_options?(botpress_response)
     botpress_response['type'] == 'single-choice'
+  end
+
+  def response_image?(response)
+    response['type'] == 'image'
+  end
+
+  def response_file?(response)
+    response['type'] == 'file'
+  end
+
+  def response_video?(response)
+    response['type'] == 'video'
+  end
+
+  def response_choice_options?(response)
+    response['type'] == 'single-choice'
   end
 end
