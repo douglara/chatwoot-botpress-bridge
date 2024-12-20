@@ -12,4 +12,4 @@ WORKDIR $app
 # Copy the main application.
 COPY . ./
 
-CMD bundle exec puma -C config/puma.rb
+CMD ["bin/boot"]

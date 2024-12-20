@@ -18,4 +18,15 @@ class ActiveSupport::TestCase
       ENV.replace old
     end
   end
+
+  def with_logger_introspection(&block)
+    orig_logger = Rails.logger.dup
+    @logger_output = StringIO.new
+    begin
+      Rails.logger = ActiveSupport::Logger.new(@logger_output)
+      block.call(@logger_output)
+    ensure
+      Rails.logger = orig_logger
+    end
+  end
 end
