@@ -27,3 +27,6 @@
 /config/master.key
 
 .env
+
+/storage
+/coverage
