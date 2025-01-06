@@ -1,23 +1,3 @@
-# FROM ruby:3.2.2
-
-# COPY Gemfile* /tmp/
-# WORKDIR /tmp
-# RUN gem install bundler
-# RUN bundle install
-
-# ENV app /app
-# RUN mkdir $app
-# WORKDIR $app
-
-# # Copy the main application.
-# COPY . ./
-
-# CMD ["bin/boot"]
-
-
-
-
-
 # syntax = docker/dockerfile:1
 
 # Make sure it matches the Ruby version in .ruby-version and Gemfile
