@@ -28,5 +28,6 @@
 
 .env
 
-/storage
+/storage/*
 /coverage
+!/storage/.keep
