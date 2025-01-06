@@ -22,6 +22,7 @@
 
 # Make sure it matches the Ruby version in .ruby-version and Gemfile
 ARG RUBY_VERSION=3.2.2
+ARG TARGETPLATFORM=linux/amd64
 FROM ruby:$RUBY_VERSION-slim as base
 
 # Rails app lives here
