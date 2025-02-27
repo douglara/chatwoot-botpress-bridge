@@ -32,7 +32,7 @@ gem "bootsnap", require: false
 gem 'faraday'
 gem 'u-case', '~> 4.5.1'
 gem 'sqlite3', '2.4.1'
-gem "solid_queue", "1.1.0"
+gem "solid_queue", "1.1.3"
 gem "mission_control-jobs"
 gem "propshaft"
 
