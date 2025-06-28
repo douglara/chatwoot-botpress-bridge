@@ -23,7 +23,7 @@ class SendToBotpressTest < ActionDispatch::IntegrationTest
         body: '{"responses":[{"type":"text","workflow":{},"text":"Teste ok","markdown":true,"typing":true}]}'
       )
 
-    assert subject_call.success?
+    assert send_to_botpress_call.success?
   end
 
   test "valid event without content but with an attachment" do
@@ -44,20 +44,20 @@ class SendToBotpressTest < ActionDispatch::IntegrationTest
         body: '{"responses":[{"type":"text","workflow":{},"text":"Teste ok","markdown":true,"typing":true}]}'
       )
 
-    assert subject_call.success?
+    assert send_to_botpress_call.success?
   end
 
   test "invalid event" do
     @event = {}
 
-    assert_raise(Exception) { subject_call.success? }
+    assert_raise(Exception) { send_to_botpress_call.success? }
   end
 
   test "invalid endpoint" do
     stub_request(:post, Regexp.new(@botpress_endpoint))
       .with(@request_options).to_return(status: 404)
 
-    result = subject_call
+    result = send_to_botpress_call
 
     assert result.failure?
     assert_equal 'Invalid botpress endpoint', result.data[:message]
@@ -71,7 +71,7 @@ class SendToBotpressTest < ActionDispatch::IntegrationTest
         body: '{"statusCode":404,"errorCode":"BP_0044","type":"NotFoundError","message":"Not Found: Invalid Bot ID","details":"","docs":"https://botpress.com/docs"}',
       )
 
-    result = subject_call
+    result = send_to_botpress_call
 
     assert result.failure?
     assert_equal 'Invalid Bot ID', result.data[:message]
@@ -83,7 +83,7 @@ class SendToBotpressTest < ActionDispatch::IntegrationTest
     JSON.parse(File.read(Rails.root.join("test/fixtures/files/#{filename}")))
   end
 
-  def subject_call
+  def send_to_botpress_call
     Botpress::SendToBotpress.call(
       event: @event,
       botpress_endpoint: @botpress_endpoint,
