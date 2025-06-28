@@ -15,7 +15,7 @@ class SendToBotpressTest < ActionDispatch::IntegrationTest
     }
   end
 
-  test "valid event" do
+  test "valid event with content and no attachments" do
     stub_request(:post, Regexp.new(@botpress_endpoint))
       .with(@request_options)
       .to_return(
@@ -26,7 +26,7 @@ class SendToBotpressTest < ActionDispatch::IntegrationTest
     assert subject_call.success?
   end
 
-  test "valid event with no content and with attachment" do
+  test "valid event without content but with an attachment" do
     @event = load_event('new_message_with_no_content_and_with_attachment.json')
 
     @request_options = {
