@@ -1,0 +1,308 @@
+{
+  "account": {
+    "id": 71,
+    "name": "[REDACTED]"
+  },
+  "additional_attributes": {},
+  "content_attributes": {},
+  "content_type": "text",
+  "content": null,
+  "conversation": {
+    "additional_attributes": {},
+    "can_reply": true,
+    "channel": "Channel::Whatsapp",
+    "contact_inbox": {
+      "id": 1482553,
+      "contact_id": 1452266,
+      "inbox_id": 380,
+      "source_id": "[REDACTED]",
+      "created_at": "2025-06-13T13:20:17.827Z",
+      "updated_at": "2025-06-13T13:20:17.827Z",
+      "hmac_verified": false,
+      "pubsub_token": "[REDACTED]"
+    },
+    "id": 28016,
+    "inbox_id": 380,
+    "messages": [
+      {
+        "id": 14975373,
+        "content": null,
+        "account_id": 71,
+        "inbox_id": 380,
+        "conversation_id": 28016,
+        "message_type": 0,
+        "created_at": 1749820852,
+        "updated_at": "2025-06-13T13:20:52.810Z",
+        "private": false,
+        "status": "sent",
+        "source_id": "[REDACTED]",
+        "content_type": "text",
+        "content_attributes": {},
+        "sender_type": "Contact",
+        "sender_id": 1452266,
+        "external_source_ids": {},
+        "additional_attributes": {},
+        "processed_message_content": null,
+        "sentiment": {},
+        "conversation": {
+          "assignee_id": null,
+          "unread_count": 3,
+          "last_activity_at": 1749820852,
+          "contact_inbox": {
+            "source_id": "[REDACTED]"
+          }
+        },
+        "attachments": [
+          {
+            "id": 829704,
+            "message_id": 14975373,
+            "file_type": "image",
+            "account_id": 71,
+            "extension": null,
+            "data_url": "[REDACTED]",
+            "thumb_url": "[REDACTED]",
+            "file_size": 674282,
+            "width": null,
+            "height": null
+          }
+        ],
+        "sender": {
+          "additional_attributes": {},
+          "custom_attributes": {},
+          "email": "[REDACTED]",
+          "id": 1452266,
+          "identifier": "[REDACTED]",
+          "name": "[REDACTED]",
+          "phone_number": "[REDACTED]",
+          "thumbnail": "",
+          "type": "contact"
+        }
+      }
+    ],
+    "labels": [],
+    "meta": {
+      "sender": {
+        "additional_attributes": {},
+        "custom_attributes": {},
+        "email": "[REDACTED]",
+        "id": 1452266,
+        "identifier": "[REDACTED]",
+        "name": "[REDACTED]",
+        "phone_number": "[REDACTED]",
+        "thumbnail": "",
+        "type": "contact"
+      },
+      "assignee": null,
+      "team": null,
+      "hmac_verified": false
+    },
+    "status": "pending",
+    "custom_attributes": {},
+    "snoozed_until": null,
+    "unread_count": 3,
+    "first_reply_created_at": null,
+    "priority": null,
+    "waiting_since": 1749820817,
+    "agent_last_seen_at": 0,
+    "contact_last_seen_at": 0,
+    "timestamp": 1749820852,
+    "created_at": 1749820817
+  },
+  "created_at": "2025-06-13T13:20:52.810Z",
+  "id": 14975373,
+  "inbox": {
+    "id": 380,
+    "name": "[REDACTED]"
+  },
+  "message_type": "incoming",
+  "private": false,
+  "sender": {
+    "account": {
+      "id": 71,
+      "name": "[REDACTED]"
+    },
+    "additional_attributes": {},
+    "avatar": "",
+    "custom_attributes": {},
+    "email": "[REDACTED]",
+    "id": 1452266,
+    "identifier": "[REDACTED]",
+    "name": "[REDACTED]",
+    "phone_number": "[REDACTED]",
+    "thumbnail": ""
+  },
+  "source_id": "[REDACTED]",
+  "attachments": [
+    {
+      "id": 829704,
+      "message_id": 14975373,
+      "file_type": "image",
+      "account_id": 71,
+      "extension": null,
+      "data_url": "[REDACTED]",
+      "thumb_url": "[REDACTED]",
+      "file_size": 674282,
+      "width": null,
+      "height": null
+    }
+  ],
+  "event": "message_created",
+  "botpress_endpoint": "[REDACTED]",
+  "botpress_bot_id": "[REDACTED]",
+  "chatwoot_bot_token": "[REDACTED]",
+  "chatwoot_endpoint": "[REDACTED]",
+  "active_buttons": "true",
+  "chatwoot_admin_token": "[REDACTED]",
+  "controller": "chatwoot",
+  "action": "webhook",
+  "chatwoot": {
+    "account": {
+      "id": 71,
+      "name": "[REDACTED]"
+    },
+    "additional_attributes": {},
+    "content_attributes": {},
+    "content_type": "text",
+    "content": null,
+    "conversation": {
+      "additional_attributes": {},
+      "can_reply": true,
+      "channel": "Channel::Whatsapp",
+      "contact_inbox": {
+        "id": 1482553,
+        "contact_id": 1452266,
+        "inbox_id": 380,
+        "source_id": "[REDACTED]",
+        "created_at": "2025-06-13T13:20:17.827Z",
+        "updated_at": "2025-06-13T13:20:17.827Z",
+        "hmac_verified": false,
+        "pubsub_token": "[REDACTED]"
+      },
+      "id": 28016,
+      "inbox_id": 380,
+      "messages": [
+        {
+          "id": 14975373,
+          "content": null,
+          "account_id": 71,
+          "inbox_id": 380,
+          "conversation_id": 28016,
+          "message_type": 0,
+          "created_at": 1749820852,
+          "updated_at": "2025-06-13T13:20:52.810Z",
+          "private": false,
+          "status": "sent",
+          "source_id": "[REDACTED]",
+          "content_type": "text",
+          "content_attributes": {},
+          "sender_type": "Contact",
+          "sender_id": 1452266,
+          "external_source_ids": {},
+          "additional_attributes": {},
+          "processed_message_content": null,
+          "sentiment": {},
+          "conversation": {
+            "assignee_id": null,
+            "unread_count": 3,
+            "last_activity_at": 1749820852,
+            "contact_inbox": {
+              "source_id": "[REDACTED]"
+            }
+          },
+          "attachments": [
+            {
+              "id": 829704,
+              "message_id": 14975373,
+              "file_type": "image",
+              "account_id": 71,
+              "extension": null,
+              "data_url": "[REDACTED]",
+              "thumb_url": "[REDACTED]",
+              "file_size": 674282,
+              "width": null,
+              "height": null
+            }
+          ],
+          "sender": {
+            "additional_attributes": {},
+            "custom_attributes": {},
+            "email": "[REDACTED]",
+            "id": 1452266,
+            "identifier": "[REDACTED]",
+            "name": "[REDACTED]",
+            "phone_number": "[REDACTED]",
+            "thumbnail": "",
+            "type": "contact"
+          }
+        }
+      ],
+      "labels": [],
+      "meta": {
+        "sender": {
+          "additional_attributes": {},
+          "custom_attributes": {},
+          "email": "[REDACTED]",
+          "id": 1452266,
+          "identifier": "[REDACTED]",
+          "name": "[REDACTED]",
+          "phone_number": "[REDACTED]",
+          "thumbnail": "",
+          "type": "contact"
+        },
+        "assignee": null,
+        "team": null,
+        "hmac_verified": false
+      },
+      "status": "pending",
+      "custom_attributes": {},
+      "snoozed_until": null,
+      "unread_count": 3,
+      "first_reply_created_at": null,
+      "priority": null,
+      "waiting_since": 1749820817,
+      "agent_last_seen_at": 0,
+      "contact_last_seen_at": 0,
+      "timestamp": 1749820852,
+      "created_at": 1749820817
+    },
+    "created_at": "2025-06-13T13:20:52.810Z",
+    "id": 14975373,
+    "inbox": {
+      "id": 380,
+      "name": "[REDACTED]"
+    },
+    "message_type": "incoming",
+    "private": false,
+    "sender": {
+      "account": {
+        "id": 71,
+        "name": "[REDACTED]"
+      },
+      "additional_attributes": {},
+      "avatar": "",
+      "custom_attributes": {},
+      "email": "[REDACTED]",
+      "id": 1452266,
+      "identifier": "[REDACTED]",
+      "name": "[REDACTED]",
+      "phone_number": "[REDACTED]",
+      "thumbnail": ""
+    },
+    "source_id": "[REDACTED]",
+    "attachments": [
+      {
+        "id": 829704,
+        "message_id": 14975373,
+        "file_type": "image",
+        "account_id": 71,
+        "extension": null,
+        "data_url": "[REDACTED]",
+        "thumb_url": "[REDACTED]",
+        "file_size": 674282,
+        "width": null,
+        "height": null
+      }
+    ],
+    "event": "message_created"
+  }
+}
