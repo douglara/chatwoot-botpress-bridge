@@ -1,6 +1,6 @@
 require 'faraday'
 
-class Botpress::SendToBotpress < Micro::Case
+class Chatwoot::SendToBotpress < Micro::Case
   attributes :event
   attributes :botpress_endpoint
   attributes :botpress_bot_id

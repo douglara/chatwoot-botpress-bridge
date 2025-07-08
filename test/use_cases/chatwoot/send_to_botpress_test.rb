@@ -84,7 +84,7 @@ class SendToBotpressTest < ActionDispatch::IntegrationTest
   end
 
   def send_to_botpress_call
-    Botpress::SendToBotpress.call(
+    Chatwoot::SendToBotpress.call(
       event: @event,
       botpress_endpoint: @botpress_endpoint,
       botpress_bot_id: @botpress_bot_id
