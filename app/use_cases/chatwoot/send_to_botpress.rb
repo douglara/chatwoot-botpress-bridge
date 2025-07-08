@@ -1,13 +1,28 @@
 require 'faraday'
 
-class Chatwoot::SendToBotpress < Micro::Case
+class Botpress::SendToBotpress < Micro::Case
   attributes :event
   attributes :botpress_endpoint
   attributes :botpress_bot_id
 
+  # Event {
+  #   'conversation' => {
+  #     'id' => String
+  #     ...
+  #   }
+  #   'content' => NilableString
+  #   'attachments' => Array<Attachment>
+  #   ...
+  # }
+
+  # Attachment {
+  #   'file_type' => String
+  #   ...
+  # }
+
   def call!
     conversation_id = event['conversation']['id']
-    message_content = event['content']
+    message_content = event_message_content(event)
     url = "#{botpress_endpoint}/api/v1/bots/#{botpress_bot_id}/converse/#{conversation_id}"
 
     body = {
@@ -31,5 +46,28 @@ class Chatwoot::SendToBotpress < Micro::Case
     else
       Failure result: { message: 'Invalid botpress endpoint' }
     end
+  end
+
+  private
+
+  # : (Event) -> String
+  def event_message_content(event)
+    content, attachments = event.values_at('content', 'attachments')
+
+    return content if content.present? || attachments.blank?
+
+    map_attachments_to_message_content(attachments)
+  end
+
+  # : (Array<Attachment>) -> String
+  def map_attachments_to_message_content(attachments)
+    attachments
+      .map { |attachment| map_attachment_to_message_content(attachment) }
+      .join(' ')
+  end
+
+  # : (Attachment) -> String
+  def map_attachment_to_message_content(attachment)
+    "/#{attachment['file_type']}"
   end
 end
