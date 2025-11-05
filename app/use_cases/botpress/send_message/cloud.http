@@ -1,0 +1,15 @@
+POST {{$dotenv BOTPRESS_ENDPOINT}}/{{$dotenv BOTPRESS_CLOUD_WEBHOOK_TOKEN}}/messages HTTP/1.1
+content-type: application/json
+x-user-key: {{$dotenv BOTPRESS_CLOUD_USER_TOKEN}}
+
+{
+  "payload": {
+    "type": "text",
+    "text": "Olá, tudo bem denovo?",
+    "meta": {
+      "event": "teste 123"
+    },
+    "property1": "123456"
+  },
+  "conversationId": "sssssssssssssssssssdddddddddd"
+}
