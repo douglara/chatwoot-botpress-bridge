@@ -1,6 +1,6 @@
 require 'faraday'
 
-class Botpress::SendMessage::SelfHosted < Botpress::Send::Base
+class Botpress::Api::Message::Send::SelfHosted < Botpress::Api::Message::Send::Base
   attributes :botpress_bot_id
 
   def call!

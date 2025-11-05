@@ -1,4 +1,4 @@
-class Botpress::SendMessage::Base < Micro::Case
+class Botpress::Api::Message::Send::Base < Micro::Case
   attributes :event
   attributes :botpress_endpoint
 
@@ -19,11 +19,6 @@ class Botpress::SendMessage::Base < Micro::Case
 
   private
 
-  def log_response_infos(response)
-    Rails.logger.info("Botpress response")
-    Rails.logger.info("Status code: #{response.status}")
-    Rails.logger.info("Body: #{response.body}")
-  end
   # : (Event) -> String
   def event_message_content(event)
     content, attachments = event.values_at('content', 'attachments')

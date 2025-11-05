@@ -31,7 +31,7 @@ class Botpress::ReceiveEvent < Micro::Case
     ['BOTPRESS_ENDPOINT']
     conversation_id = event['data']['conversationId']
 
-    messages_list = Botpress::ListMessages::Cloud.call(
+    messages_list = Botpress::Api::Conversation::ListMessages::Cloud.call(
       botpress_endpoint: botpress_endpoint,
       conversation_id: conversation_id
     )

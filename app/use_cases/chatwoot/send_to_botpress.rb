@@ -8,9 +8,9 @@ class Chatwoot::SendToBotpress < Micro::Case
 
     case host_type
     when :cloud
-      Botpress::SendMessage::Cloud.call(event:, botpress_endpoint:)
+      Botpress::Api::Message::Send::Cloud.call(event:, botpress_endpoint:)
     when :self_hosted
-      Botpress::SendMessage::SelfHosted.call(event:, botpress_endpoint:, botpress_bot_id:)
+      Botpress::Api::Message::Send::SelfHosted.call(event:, botpress_endpoint:, botpress_bot_id:)
     end
   end
 end
