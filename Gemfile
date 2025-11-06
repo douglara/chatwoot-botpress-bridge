@@ -45,7 +45,6 @@ group :development, :test do
   gem 'byebug'
   gem 'simplecov', '0.17.1', require: false
   gem 'simplecov_json_formatter', require: false
-  gem 'log_bench'
 end
 
 group :development do

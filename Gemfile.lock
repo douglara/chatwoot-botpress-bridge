@@ -92,7 +92,6 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
-    curses (1.5.3)
     date (3.4.1)
     debug (1.10.0)
       irb (~> 1.10)
@@ -130,17 +129,7 @@ GEM
       reline (>= 0.4.2)
     json (2.9.1)
     kind (5.10.0)
-    log_bench (0.5.0)
-      curses (~> 1.5)
-      lograge (~> 0.14)
-      net-http (~> 0.6)
-      zeitwerk (~> 2.7)
     logger (1.6.3)
-    lograge (0.14.0)
-      actionpack (>= 4)
-      activesupport (>= 4)
-      railties (>= 4)
-      request_store (~> 1.0)
     loofah (2.23.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -164,8 +153,6 @@ GEM
       turbo-rails
     msgpack (1.7.2)
     mutex_m (0.3.0)
-    net-http (0.7.0)
-      uri
     net-imap (0.5.2)
       date
       net-protocol
@@ -235,8 +222,6 @@ GEM
       psych (>= 4.0.0)
     reline (0.6.0)
       io-console (~> 0.5)
-    request_store (1.7.0)
-      rack (>= 1.4)
     rexml (3.2.6)
     ruby2_keywords (0.0.5)
     securerandom (0.4.1)
@@ -269,7 +254,6 @@ GEM
     u-case (4.5.2)
       kind (>= 5.6, < 6.0)
       u-attributes (>= 2.7, < 3.0)
-    uri (1.1.1)
     vcr (6.2.0)
     webmock (3.19.1)
       addressable (>= 2.8.0)
@@ -289,7 +273,6 @@ DEPENDENCIES
   debug
   dotenv-rails
   faraday
-  log_bench
   mission_control-jobs
   propshaft
   puma (~> 6.0)
