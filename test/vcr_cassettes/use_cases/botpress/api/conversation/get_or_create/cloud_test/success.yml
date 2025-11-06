@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://chat.botpress.cloud/ae10f78a-041d-4fec-af87-a2a3c1097a5b/conversations/get-or-create
+    body:
+      encoding: UTF-8
+      string: '{"id":"123456"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      X-User-Key:
+      - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJfMDFLOThYUDE3MEE3SzVUQ1lSMzNZQVRDNEEiLCJpYXQiOjE3NjIzMDk4OTl9.b5qocxiuMP_M8Mxl2iCfR4qn9cF1x3eHWjCZf3rRwrU
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 06 Nov 2025 04:20:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '110'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - OPTIONS, HEAD, GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Date, X-Amzn-Requestid, X-Amzn-Trace-Id, X-Trace-Id
+      Access-Control-Max-Age:
+      - '3600'
+      X-Amzn-Requestid:
+      - 347b480c-8110-46da-8c8a-061b99f911c4
+      X-Amzn-Trace-Id:
+      - Root=1-690c220a-523f66c23d5984e95c63e17d;Parent=6ae1bc4f3a69ca6b;Sampled=0;Lineage=1:318aa344:0
+      X-Trace-Id:
+      - 3fbd4b9102612f12cb5c1feda5bd1cd9
+    body:
+      encoding: UTF-8
+      string: '{"conversation":{"id":"123456","createdAt":"2025-11-06T04:20:26.642Z","updatedAt":"2025-11-06T04:20:26.642Z"}}'
+  recorded_at: Thu, 06 Nov 2025 04:20:25 GMT
+recorded_with: VCR 6.2.0

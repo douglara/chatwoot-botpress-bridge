@@ -1,6 +1,6 @@
 require "test_helper"
 
-class Botpress::SelfHosted::SendTest < ActionDispatch::IntegrationTest
+class Botpress::Api::Message::Send::SelfHostedTest < ActionDispatch::IntegrationTest
   setup do
     @event = load_event('new_message.json')
     @botpress_endpoint = ENV['BOTPRESS_ENDPOINT']
@@ -23,7 +23,7 @@ class Botpress::SelfHosted::SendTest < ActionDispatch::IntegrationTest
         body: '{"responses":[{"type":"text","workflow":{},"text":"Teste ok","markdown":true,"typing":true}]}'
       )
 
-    assert send_to_botpress_call.success?
+    assert send_message_to_botpress_call.success?
   end
 
   test "valid event without content but with an attachment" do
@@ -44,20 +44,20 @@ class Botpress::SelfHosted::SendTest < ActionDispatch::IntegrationTest
         body: '{"responses":[{"type":"text","workflow":{},"text":"Teste ok","markdown":true,"typing":true}]}'
       )
 
-    assert send_to_botpress_call.success?
+    assert send_message_to_botpress_call.success?
   end
 
   test "invalid event" do
     @event = {}
 
-    assert_raise(Exception) { send_to_botpress_call.success? }
+    assert_raise(Exception) { send_message_to_botpress_call.success? }
   end
 
   test "invalid endpoint" do
     stub_request(:post, Regexp.new(@botpress_endpoint))
       .with(@request_options).to_return(status: 404)
 
-    result = send_to_botpress_call
+    result = send_message_to_botpress_call
 
     assert result.failure?
     assert_equal 'Invalid botpress endpoint', result.data[:message]
@@ -71,7 +71,7 @@ class Botpress::SelfHosted::SendTest < ActionDispatch::IntegrationTest
         body: '{"statusCode":404,"errorCode":"BP_0044","type":"NotFoundError","message":"Not Found: Invalid Bot ID","details":"","docs":"https://botpress.com/docs"}',
       )
 
-    result = send_to_botpress_call
+    result = send_message_to_botpress_call
 
     assert result.failure?
     assert_equal 'Invalid Bot ID', result.data[:message]
@@ -83,8 +83,8 @@ class Botpress::SelfHosted::SendTest < ActionDispatch::IntegrationTest
     JSON.parse(File.read(Rails.root.join("test/fixtures/files/#{filename}")))
   end
 
-  def send_to_botpress_call
-    Botpress::SelfHosted::Send.call(
+  def send_message_to_botpress_call
+    Botpress::Api::Message::Send::SelfHosted.call(
       event: @event,
       botpress_endpoint: @botpress_endpoint,
       botpress_bot_id: @botpress_bot_id

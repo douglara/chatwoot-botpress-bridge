@@ -1,0 +1,464 @@
+{
+    "messages": [
+        {
+            "id": "bf0e76b7-216c-4506-a481-7cbb802cb10b",
+            "createdAt": "2025-11-05T08:31:32.036Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais eventos estão disponíveis?",
+                        "value": "Quais eventos estão disponíveis?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as regras de segurança?",
+                        "value": "Quais são as regras de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "b0e6b73b-1d9e-4cce-b69b-56d6cd606ddf",
+            "createdAt": "2025-11-05T08:31:26.762Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XP170A7K5TCYR33YATC4A",
+            "payload": {
+                "type": "text",
+                "text": "Olá, tudo bem denovo?",
+                "metadata": {
+                    "event": {
+                        "account": {
+                            "id": 5
+                        },
+                        "conversation": {
+                            "id": 1
+                        }
+                    }
+                },
+                "property1": "123456"
+            }
+        },
+        {
+            "id": "6ca4244e-e64c-4b91-90e4-bb059353ec42",
+            "createdAt": "2025-11-05T06:40:27.554Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais eventos estão disponíveis?",
+                        "value": "Quais eventos estão disponíveis?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as regras de segurança?",
+                        "value": "Quais são as regras de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "7007bb66-24f6-4340-b518-0a41e2a4ff2f",
+            "createdAt": "2025-11-05T06:40:22.878Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XP170A7K5TCYR33YATC4A",
+            "payload": {
+                "type": "text",
+                "text": "Olá, tudo bem denovo?",
+                "metadata": {
+                    "event": "teste 123"
+                },
+                "property1": "123456"
+            }
+        },
+        {
+            "id": "40898c54-7a00-4451-b07f-10db7d309187",
+            "createdAt": "2025-11-05T06:33:22.898Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais eventos estão disponíveis?",
+                        "value": "Quais eventos estão disponíveis?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as regras de segurança?",
+                        "value": "Quais são as regras de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "f03610d9-9af5-4cee-9016-c84781303692",
+            "createdAt": "2025-11-05T06:33:17.814Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XP170A7K5TCYR33YATC4A",
+            "payload": {
+                "type": "text",
+                "text": "Olá, tudo bem denovo?",
+                "metadata": {
+                    "event": "teste 123"
+                },
+                "property1": "123456"
+            }
+        },
+        {
+            "id": "c0786469-343a-4da8-87bf-904fb5f4439e",
+            "createdAt": "2025-11-05T05:07:53.345Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais eventos estão disponíveis?",
+                        "value": "Quais eventos estão disponíveis?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as regras de segurança?",
+                        "value": "Quais são as regras de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "7d1aa39e-b3c6-4ccc-943b-8e1d4580b68b",
+            "createdAt": "2025-11-05T05:07:51.424Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais eventos estão disponíveis?",
+                        "value": "Quais eventos estão disponíveis?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as regras de segurança?",
+                        "value": "Quais são as regras de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "e12c67dc-a8eb-475e-9832-218c1980ade9",
+            "createdAt": "2025-11-05T05:07:49.413Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais eventos estão disponíveis?",
+                        "value": "Quais eventos estão disponíveis?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as regras de segurança?",
+                        "value": "Quais são as regras de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "7bd58224-45a3-4957-952c-62e353de6f96",
+            "createdAt": "2025-11-05T05:07:48.400Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais eventos estão disponíveis?",
+                        "value": "Quais eventos estão disponíveis?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as regras de segurança?",
+                        "value": "Quais são as regras de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "b675cb32-066b-4117-86cf-8159facac998",
+            "createdAt": "2025-11-05T05:07:46.659Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais eventos estão disponíveis?",
+                        "value": "Quais eventos estão disponíveis?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as regras de segurança?",
+                        "value": "Quais são as regras de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "0ad91808-2408-4088-8a15-47fe619a0cef",
+            "createdAt": "2025-11-05T05:07:42.253Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais eventos estão disponíveis?",
+                        "value": "Quais eventos estão disponíveis?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as regras de segurança?",
+                        "value": "Quais são as regras de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "549e6ae1-f02d-4cf9-aba4-307a6260f5b8",
+            "createdAt": "2025-11-05T05:07:37.775Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais eventos estão disponíveis?",
+                        "value": "Quais eventos estão disponíveis?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as regras de segurança?",
+                        "value": "Quais são as regras de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "205bd71b-4a98-41dd-bfa5-bfe1902bee63",
+            "createdAt": "2025-11-05T05:07:32.640Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais são os próximos eventos?",
+                        "value": "Quais são os próximos eventos?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as normas de segurança?",
+                        "value": "Quais são as normas de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "9e17075b-e1a0-4ecd-be2b-59eebb7a6219",
+            "createdAt": "2025-11-05T05:07:29.002Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais eventos estão disponíveis?",
+                        "value": "Quais eventos estão disponíveis?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as normas de segurança?",
+                        "value": "Quais são as normas de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "c6c655b3-3d5e-4bc1-b174-a4b003ccd15a",
+            "createdAt": "2025-11-05T05:07:24.169Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais eventos estão disponíveis?",
+                        "value": "Quais eventos estão disponíveis?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as normas de segurança?",
+                        "value": "Quais são as normas de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "40c08d7e-1bad-43e3-ae2b-3677a801242e",
+            "createdAt": "2025-11-05T05:07:16.410Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais são os próximos eventos?",
+                        "value": "Quais são os próximos eventos?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as normas de segurança?",
+                        "value": "Quais são as normas de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2fae6c0a-bcd2-4866-80f0-59eb52b0f70d",
+            "createdAt": "2025-11-05T05:07:12.777Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais são os próximos eventos?",
+                        "value": "Quais são os próximos eventos?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as normas de segurança?",
+                        "value": "Quais são as normas de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "8964130d-4703-434b-9301-cdbc1b955d22",
+            "createdAt": "2025-11-05T05:07:03.525Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais são os próximos eventos?",
+                        "value": "Quais são os próximos eventos?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as normas de segurança?",
+                        "value": "Quais são as normas de segurança?"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "7556f8c4-9826-46a0-87d0-ac183ac0f26d",
+            "createdAt": "2025-11-05T05:06:58.836Z",
+            "conversationId": "sssssssssssssssssssdddddddddd",
+            "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+            "payload": {
+                "type": "choice",
+                "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+                "options": [
+                    {
+                        "label": "Quais eventos estão disponíveis?",
+                        "value": "Quais eventos estão disponíveis?"
+                    },
+                    {
+                        "label": "Como faço uma reserva?",
+                        "value": "Como faço uma reserva?"
+                    },
+                    {
+                        "label": "Quais são as normas de segurança?",
+                        "value": "Quais são as normas de segurança?"
+                    }
+                ]
+            }
+        }
+    ],
+    "meta": {
+        "nextToken": "eyJzdGFydGluZ0F0IjoiMjAyNS0xMS0wNVQwNTowNjo1OC44MzZaIiwiaWQiOiI3NTU2ZjhjNC05ODI2LTQ2YTAtODdkMC1hYzE4M2FjMGYyNmQifQ=="
+    }
+}

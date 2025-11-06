@@ -1,0 +1,28 @@
+{
+    "type": "message_created",
+    "data": {
+        "id": "40c08d7e-1bad-43e3-ae2b-3677a801242e",
+        "conversationId": "sssssssssssssssssssdddddddddd",
+        "userId": "user_01K98XFC5S9CSHVRFX1YH1KGNB",
+        "createdAt": "2025-11-05T05:07:16.410Z",
+        "payload": {
+            "type": "choice",
+            "text": "Olá novamente! 😊 Estou à disposição para ajudar com informações sobre nossas atividades recreativas, eventos, reservas ou políticas.",
+            "options": [
+                {
+                    "label": "Quais são os próximos eventos?",
+                    "value": "Quais são os próximos eventos?"
+                },
+                {
+                    "label": "Como faço uma reserva?",
+                    "value": "Como faço uma reserva?"
+                },
+                {
+                    "label": "Quais são as normas de segurança?",
+                    "value": "Quais são as normas de segurança?"
+                }
+            ]
+        },
+        "isBot": true
+    }
+}

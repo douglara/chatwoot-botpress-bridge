@@ -1,0 +1,16 @@
+{
+    "message": {
+        "id": "a455774a-c9d8-48d3-b826-3c78d129fb3e",
+        "createdAt": "2025-11-06T04:06:43.042Z",
+        "conversationId": "sssssssssssssssssssdddddddddd",
+        "userId": "user_01K98XP170A7K5TCYR33YATC4A",
+        "payload": {
+            "type": "text",
+            "text": "Olá, tudo bem denovo?",
+            "meta": {
+                "event": "teste 123"
+            },
+            "property1": "123456"
+        }
+    }
+}
