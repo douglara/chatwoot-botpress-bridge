@@ -1,5 +1,3 @@
-require 'faraday'
-
 class Botpress::ReceiveEvent < Micro::Case
   attributes :event
 
