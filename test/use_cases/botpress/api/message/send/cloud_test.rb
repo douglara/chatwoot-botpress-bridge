@@ -5,10 +5,11 @@ class Botpress::Api::Message::Send::CloudTest < ActionDispatch::IntegrationTest
     @event = { "conversation" => { "id" => "sssssssssssssssssssdddddddddd" }, "content" => "Olá" }
     @botpress_endpoint = ENV['BOTPRESS_ENDPOINT']
     @botpress_message_send_response = File.read(Rails.root.to_s + "/test/fixtures/botpress/cloud/api/message/send_response.json")
+    @botpress_get_or_create_response = '{"conversation":{"id":"sssssssssssssssssssdddddddddd","createdAt":"2025-11-06T10:23:06.830Z","updatedAt":"2025-11-06T10:23:06.830Z"}}'
   end
 
   test "success" do
-    stub_request(:get, /get-or-create/).
+    stub_request(:post, /get-or-create/).
     to_return(status: 200, body: @botpress_get_or_create_response, headers: {'Content-Type': 'application/json; charset=utf-8'})
 
     stub_request(:post, /messages/).
@@ -20,7 +21,7 @@ class Botpress::Api::Message::Send::CloudTest < ActionDispatch::IntegrationTest
   end
 
   test "invalid" do
-    stub_request(:get, /get-or-create/).
+    stub_request(:post, /get-or-create/).
     to_return(status: 200, body: @botpress_get_or_create_response, headers: {'Content-Type': 'application/json; charset=utf-8'})
 
     stub_request(:post, /messages/).

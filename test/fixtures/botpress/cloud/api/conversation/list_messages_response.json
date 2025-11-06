@@ -32,7 +32,9 @@
             "payload": {
                 "type": "text",
                 "text": "Olá, tudo bem denovo?",
-                "metadata": {
+                "property1": "123456"
+            },
+            "metadata": {
                     "event": {
                         "account": {
                             "id": 5
@@ -41,8 +43,6 @@
                             "id": 1
                         }
                     }
-                },
-                "property1": "123456"
             }
         },
         {
