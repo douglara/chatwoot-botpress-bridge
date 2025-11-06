@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://chat.botpress.cloud/ae10f78a-041d-4fec-af87-a2a3c1097a5b/conversations/get-or-create
+    body:
+      encoding: UTF-8
+      string: '{"id":"sssssssssssssssssssdddddddddd"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      X-User-Key:
+      - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJfMDFLOThYUDE3MEE3SzVUQ1lSMzNZQVRDNEEiLCJpYXQiOjE3NjIzMDk4OTl9.b5qocxiuMP_M8Mxl2iCfR4qn9cF1x3eHWjCZf3rRwrU
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 06 Nov 2025 06:30:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '133'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - OPTIONS, HEAD, GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Date, X-Amzn-Requestid, X-Amzn-Trace-Id, X-Trace-Id
+      Access-Control-Max-Age:
+      - '3600'
+      X-Amzn-Requestid:
+      - 9c2863cf-06a0-4c85-85c5-d558950ece87
+      X-Amzn-Trace-Id:
+      - Root=1-690c4089-6c155104267ef64c7166490e;Parent=01db2460438d35fc;Sampled=0;Lineage=1:318aa344:0
+      X-Trace-Id:
+      - c852b979d000428ca83cdf6066c3443d
+    body:
+      encoding: UTF-8
+      string: '{"conversation":{"id":"sssssssssssssssssssdddddddddd","createdAt":"2025-11-05T02:43:21.545Z","updatedAt":"2025-11-06T06:18:16.852Z"}}'
+  recorded_at: Thu, 06 Nov 2025 06:30:32 GMT
+- request:
+    method: post
+    uri: https://chat.botpress.cloud/ae10f78a-041d-4fec-af87-a2a3c1097a5b/messages
+    body:
+      encoding: UTF-8
+      string: '{"payload":{"text":"Olá","type":"text","metadata":{"event":{"conversation":{"id":"sssssssssssssssssssdddddddddd"},"content":"Olá"}}},"conversationId":"sssssssssssssssssssdddddddddd"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      X-User-Key:
+      - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJfMDFLOThYUDE3MEE3SzVUQ1lSMzNZQVRDNEEiLCJpYXQiOjE3NjIzMDk4OTl9.b5qocxiuMP_M8Mxl2iCfR4qn9cF1x3eHWjCZf3rRwrU
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 06 Nov 2025 06:30:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '322'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - OPTIONS, HEAD, GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Date, X-Amzn-Requestid, X-Amzn-Trace-Id, X-Trace-Id
+      Access-Control-Max-Age:
+      - '3600'
+      X-Amzn-Requestid:
+      - d2a70b8a-d632-4b9f-9cb9-53374f7fa501
+      X-Amzn-Trace-Id:
+      - Root=1-690c408a-4a9c17916ac970e21dbf60b5;Parent=463a3d0876eb388e;Sampled=0;Lineage=1:318aa344:0
+      X-Trace-Id:
+      - b96e2a84d708c039fba5df2b7bb486ae
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJtZXNzYWdlIjp7ImlkIjoiZGRkMDdlMTItODdkNC00ZmFjLTkyYTItMGFmNDUyODkwNGQ5IiwiY3JlYXRlZEF0IjoiMjAyNS0xMS0wNlQwNjozMDozNC40ODBaIiwiY29udmVyc2F0aW9uSWQiOiJzc3Nzc3Nzc3Nzc3Nzc3Nzc3NzZGRkZGRkZGRkZCIsInVzZXJJZCI6InVzZXJfMDFLOThYUDE3MEE3SzVUQ1lSMzNZQVRDNEEiLCJwYXlsb2FkIjp7InR5cGUiOiJ0ZXh0IiwidGV4dCI6Ik9sw6EifSwibWV0YWRhdGEiOnsiZXZlbnQiOnsiY29udmVyc2F0aW9uIjp7ImlkIjoic3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc2RkZGRkZGRkZGQifSwiY29udGVudCI6Ik9sw6EifX19fQ==
+  recorded_at: Thu, 06 Nov 2025 06:30:33 GMT
+recorded_with: VCR 6.2.0

@@ -1,0 +1,304 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://chat.botpress.cloud/d15a0a6c-d3be-419d-846a-240edbfe2646/ae10f78a-041d-4fec-af87-a2a3c1097a5b/conversations/get-or-create
+    body:
+      encoding: UTF-8
+      string: '{"id":"sssssssssssssssssssdddddddddd"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      X-User-Key:
+      - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJfMDFLOThYUDE3MEE3SzVUQ1lSMzNZQVRDNEEiLCJpYXQiOjE3NjIzMDk4OTl9.b5qocxiuMP_M8Mxl2iCfR4qn9cF1x3eHWjCZf3rRwrU
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 06 Nov 2025 06:08:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '33'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - OPTIONS, HEAD, GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Date, X-Amzn-Requestid, X-Amzn-Trace-Id, X-Trace-Id
+      Access-Control-Max-Age:
+      - '3600'
+      X-Amzn-Requestid:
+      - 247bc040-6ca5-469d-b6b5-b1067a942c92
+      X-Amzn-Trace-Id:
+      - Root=1-690c3b4d-3361d5fc5680464f0e23d65d;Parent=392e03652f796956;Sampled=0;Lineage=1:0e41a56e:0
+      X-Trace-Id:
+      - 3d76827779144fb9dc43233036e50727
+    body:
+      encoding: UTF-8
+      string: '{"message":"Route doesn''t exist"}'
+  recorded_at: Thu, 06 Nov 2025 06:08:12 GMT
+- request:
+    method: post
+    uri: https://chat.botpress.cloud/d15a0a6c-d3be-419d-846a-240edbfe2646/ae10f78a-041d-4fec-af87-a2a3c1097a5b/messages
+    body:
+      encoding: UTF-8
+      string: '{"payload":{"text":"Olá","type":"text","metadata":{"event":{"conversation":{"id":"sssssssssssssssssssdddddddddd"},"content":"Olá"}}},"conversationId":"sssssssssssssssssssdddddddddd"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      X-User-Key:
+      - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJfMDFLOThYUDE3MEE3SzVUQ1lSMzNZQVRDNEEiLCJpYXQiOjE3NjIzMDk4OTl9.b5qocxiuMP_M8Mxl2iCfR4qn9cF1x3eHWjCZf3rRwrU
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 06 Nov 2025 06:08:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '33'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - OPTIONS, HEAD, GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Date, X-Amzn-Requestid, X-Amzn-Trace-Id, X-Trace-Id
+      Access-Control-Max-Age:
+      - '3600'
+      X-Amzn-Requestid:
+      - c376e7b2-c7bf-4c6f-9f41-e0693e2fff6d
+      X-Amzn-Trace-Id:
+      - Root=1-690c3b4e-7e229bfc33a8ede144c0fd26;Parent=65cc6ef9b4ba5426;Sampled=0;Lineage=1:0e41a56e:0
+      X-Trace-Id:
+      - ec93ab601bba275bb33e3a88c19e76d2
+    body:
+      encoding: UTF-8
+      string: '{"message":"Route doesn''t exist"}'
+  recorded_at: Thu, 06 Nov 2025 06:08:12 GMT
+- request:
+    method: post
+    uri: https://chat.botpress.cloud/d15a0a6c-d3be-419d-846a-240edbfe2646/ae10f78a-041d-4fec-af87-a2a3c1097a5b/conversations/get-or-create
+    body:
+      encoding: UTF-8
+      string: '{"id":"sssssssssssssssssssdddddddddd"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      X-User-Key:
+      - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJfMDFLOThYUDE3MEE3SzVUQ1lSMzNZQVRDNEEiLCJpYXQiOjE3NjIzMDk4OTl9.b5qocxiuMP_M8Mxl2iCfR4qn9cF1x3eHWjCZf3rRwrU
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 06 Nov 2025 06:16:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '33'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - OPTIONS, HEAD, GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Date, X-Amzn-Requestid, X-Amzn-Trace-Id, X-Trace-Id
+      Access-Control-Max-Age:
+      - '3600'
+      X-Amzn-Requestid:
+      - f33fc489-29a0-4fcc-b459-7f544315c63d
+      X-Amzn-Trace-Id:
+      - Root=1-690c3d2f-731bc2de3ec07d671d990000;Parent=73abd76ab7ae4dfc;Sampled=0;Lineage=1:0e41a56e:0
+      X-Trace-Id:
+      - ec4528f2d827e4ab486e1ef8c95be8b2
+    body:
+      encoding: UTF-8
+      string: '{"message":"Route doesn''t exist"}'
+  recorded_at: Thu, 06 Nov 2025 06:16:14 GMT
+- request:
+    method: post
+    uri: https://chat.botpress.cloud/ae10f78a-041d-4fec-af87-a2a3c1097a5b/conversations/get-or-create
+    body:
+      encoding: UTF-8
+      string: '{"id":"sssssssssssssssssssdddddddddd"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      X-User-Key:
+      - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJfMDFLOThYUDE3MEE3SzVUQ1lSMzNZQVRDNEEiLCJpYXQiOjE3NjIzMDk4OTl9.b5qocxiuMP_M8Mxl2iCfR4qn9cF1x3eHWjCZf3rRwrU
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 06 Nov 2025 06:17:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '133'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - OPTIONS, HEAD, GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Date, X-Amzn-Requestid, X-Amzn-Trace-Id, X-Trace-Id
+      Access-Control-Max-Age:
+      - '3600'
+      X-Amzn-Requestid:
+      - e7cfe947-e3ac-412c-8f7e-b7e70cd6fb56
+      X-Amzn-Trace-Id:
+      - Root=1-690c3d95-5678455728f4ff030fe13f11;Parent=1603c823b5a9c9a5;Sampled=0;Lineage=1:318aa344:0
+      X-Trace-Id:
+      - e22351651619db8911b059cb7ee3bef2
+    body:
+      encoding: UTF-8
+      string: '{"conversation":{"id":"sssssssssssssssssssdddddddddd","createdAt":"2025-11-05T02:43:21.545Z","updatedAt":"2025-11-06T04:36:55.254Z"}}'
+  recorded_at: Thu, 06 Nov 2025 06:17:56 GMT
+- request:
+    method: post
+    uri: https://chat.botpress.cloud/ae10f78a-041d-4fec-af87-a2a3c1097a5b/conversations/get-or-create
+    body:
+      encoding: UTF-8
+      string: '{"id":"sssssssssssssssssssdddddddddd"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      X-User-Key:
+      - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJfMDFLOThYUDE3MEE3SzVUQ1lSMzNZQVRDNEEiLCJpYXQiOjE3NjIzMDk4OTl9.b5qocxiuMP_M8Mxl2iCfR4qn9cF1x3eHWjCZf3rRwrU
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 06 Nov 2025 06:18:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '133'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - OPTIONS, HEAD, GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Date, X-Amzn-Requestid, X-Amzn-Trace-Id, X-Trace-Id
+      Access-Control-Max-Age:
+      - '3600'
+      X-Amzn-Requestid:
+      - be73fa97-1ae4-4776-847f-448b933bfd36
+      X-Amzn-Trace-Id:
+      - Root=1-690c3d9d-2a20c4bf471f2fa86c90340a;Parent=1eda064daa7af052;Sampled=0;Lineage=1:318aa344:0
+      X-Trace-Id:
+      - dd9df87764520c6bc1ea40f057fcc5e4
+    body:
+      encoding: UTF-8
+      string: '{"conversation":{"id":"sssssssssssssssssssdddddddddd","createdAt":"2025-11-05T02:43:21.545Z","updatedAt":"2025-11-06T04:36:55.254Z"}}'
+  recorded_at: Thu, 06 Nov 2025 06:18:04 GMT
+- request:
+    method: post
+    uri: https://chat.botpress.cloud/ae10f78a-041d-4fec-af87-a2a3c1097a5b/messages
+    body:
+      encoding: UTF-8
+      string: '{"payload":{"text":"Olá","type":"text","metadata":{"event":{"conversation":{"id":"sssssssssssssssssssdddddddddd"},"content":"Olá"}}},"conversationId":"sssssssssssssssssssdddddddddd"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      X-User-Key:
+      - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJfMDFLOThYUDE3MEE3SzVUQ1lSMzNZQVRDNEEiLCJpYXQiOjE3NjIzMDk4OTl9.b5qocxiuMP_M8Mxl2iCfR4qn9cF1x3eHWjCZf3rRwrU
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 06 Nov 2025 06:18:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '322'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - OPTIONS, HEAD, GET, POST, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Date, X-Amzn-Requestid, X-Amzn-Trace-Id, X-Trace-Id
+      Access-Control-Max-Age:
+      - '3600'
+      X-Amzn-Requestid:
+      - f8abb4be-6283-4a5f-9ac8-2b7ac67e58b4
+      X-Amzn-Trace-Id:
+      - Root=1-690c3d9f-615d8bee59b17f7445ea39f5;Parent=72432d0d375313d2;Sampled=0;Lineage=1:318aa344:0
+      X-Trace-Id:
+      - 3948df8a9a13fed561f3fd85cf514269
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJtZXNzYWdlIjp7ImlkIjoiZjNmNDU2MDctMWQwOC00ZTI0LWJkZTMtNzFkYjE3N2YzYjJlIiwiY3JlYXRlZEF0IjoiMjAyNS0xMS0wNlQwNjoxODowOC4wODZaIiwiY29udmVyc2F0aW9uSWQiOiJzc3Nzc3Nzc3Nzc3Nzc3Nzc3NzZGRkZGRkZGRkZCIsInVzZXJJZCI6InVzZXJfMDFLOThYUDE3MEE3SzVUQ1lSMzNZQVRDNEEiLCJwYXlsb2FkIjp7InR5cGUiOiJ0ZXh0IiwidGV4dCI6Ik9sw6EifSwibWV0YWRhdGEiOnsiZXZlbnQiOnsiY29udmVyc2F0aW9uIjp7ImlkIjoic3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc2RkZGRkZGRkZGQifSwiY29udGVudCI6Ik9sw6EifX19fQ==
+  recorded_at: Thu, 06 Nov 2025 06:18:06 GMT
+recorded_with: VCR 6.2.0
