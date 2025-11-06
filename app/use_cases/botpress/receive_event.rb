@@ -11,7 +11,7 @@ class Botpress::ReceiveEvent < Micro::Case
 
   def process_event(event)
     if valid_event?(event)
-      botpress_event_message = event['data']
+      botpress_event_message = convert_to_botpress_self_hosted_response(event['data']['payload'])
       chatwoot_event = message_metadata
 
       chatwoot_responses = Chatwoot::SendToChatwoot.call(event: chatwoot_event, botpress_response: botpress_event_message)
@@ -33,6 +33,25 @@ class Botpress::ReceiveEvent < Micro::Case
       conversation_id: conversation_id
     )
 
-    messages_list["messages"].find { |msg| msg.dig("payload", "metadata") }&.dig("payload", "metadata", "event")
+    messages_list["messages"].find { |msg| msg.dig("metadata") }&.dig("metadata", "event")
+  end
+
+  def convert_to_botpress_self_hosted_response(botpress_cloud_response)
+    if botpress_cloud_response['type'] == 'choice'
+        {
+        "type" => "single-choice",
+        "skill" => "choice",
+        "workflow" => {},
+        "text" => botpress_cloud_response['text'],
+        "dropdownPlaceholder" => "Select...",
+        "choices" => botpress_cloud_response['options'].map { |opt|
+          { "title" => opt['label'], "value" => opt['value'] }
+        },
+        "markdown" => true,
+        "typing" => true
+      }
+    else
+      botpress_cloud_response
+    end
   end
 end

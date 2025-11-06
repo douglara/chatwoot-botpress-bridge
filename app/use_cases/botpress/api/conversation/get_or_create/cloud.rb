@@ -10,7 +10,7 @@ class Botpress::Api::Conversation::GetOrCreate::Cloud < Micro::Case
 
   def build_body
     {
-      id: conversation_id
+      id: conversation_id.to_s
     }.to_json
   end
 end
