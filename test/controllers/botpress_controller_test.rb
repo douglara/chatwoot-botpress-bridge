@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ChatwootControllerTest < ActionDispatch::IntegrationTest
+class BotpressControllerTest < ActionDispatch::IntegrationTest
   setup do
     @botpress_list_messages_response = File.read(Rails.root.to_s + "/test/fixtures/botpress/cloud/api/conversation/list_messages_response.json")
   end
