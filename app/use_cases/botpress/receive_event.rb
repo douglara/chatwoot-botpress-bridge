@@ -27,8 +27,7 @@ class Botpress::ReceiveEvent < Micro::Case
   end
 
   def message_metadata
-    botpress_endpoint = event['botpress_endpoint'] || ENV
-    ['BOTPRESS_ENDPOINT']
+    botpress_endpoint = event['botpress_endpoint'] || ENV['BOTPRESS_ENDPOINT']
     conversation_id = event['data']['conversationId']
 
     messages_list = Botpress::Api::Conversation::ListMessages::Cloud.call(

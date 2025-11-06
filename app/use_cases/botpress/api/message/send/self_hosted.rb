@@ -10,7 +10,9 @@ class Botpress::Api::Message::Send::SelfHosted < Botpress::Api::Message::Send::B
 
     response = Faraday.post(url, body.to_json, {'Content-Type': 'application/json'})
 
-    log_response_infos(response)
+    Rails.logger.info("Botpress response")
+    Rails.logger.info("Status code: #{response.status}")
+    Rails.logger.info("Body: #{response.body}")
 
     if (response.status == 200)
       Success result: JSON.parse(response.body)

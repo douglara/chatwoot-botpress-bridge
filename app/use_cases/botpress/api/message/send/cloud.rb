@@ -1,5 +1,3 @@
-require 'faraday'
-
 class Botpress::Api::Message::Send::Cloud < Botpress::Api::Message::Send::Base
   def call!
     conversation_id = event['conversation']['id']
@@ -9,7 +7,7 @@ class Botpress::Api::Message::Send::Cloud < Botpress::Api::Message::Send::Base
 
     request =  Botpress::Api::CloudClient.call(request_kind: 'post', botpress_endpoint:, path: "/messages", request_body: body)
 
-    return Success(result: OpenStruct.new(data: { 'responses' => [] })) if request.success?
+    return Success(result: { 'responses' => [] }) if request.success?
 
     request
   end
