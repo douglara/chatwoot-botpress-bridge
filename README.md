@@ -1,3 +1,4 @@
+
 # About
 
 This is a bridge connection chatwoot botpress.
@@ -101,6 +102,59 @@ In http settings set `Container HTTP Port` to `3000`
 In deployment settings set `Deploy via ImageName` with `douglara/chatwoot-botpress-bridge:1` and deploy now.
 <img src=".github/images/deploy.png" width="100%" alt=""/>
 
+# Using Botpress Cloud
+
+<details>
+  <summary>Setup bridge with Botpress Cloud</summary>
+
+
+  ### 1. Enable Bot API
+
+  Active Bot API in your Botpress Cloud integrations and set env var `BOTPRESS_CLOUD_WEBHOOK_TOKEN` with the token generated.
+  Configure Webhook URL with your bridge url `https://CHATWOOT_BOTPRESS_BRIDGE_URL/botpress/webhook`
+  
+  <img src=".github/images/botpress-cloud/3.png" width="60%" alt=""/>
+  <img src=".github/images/botpress-cloud/4.png" width="60%" alt=""/>
+  <img src=".github/images/botpress-cloud/5.png" width="60%" alt=""/>
+  <img src=".github/images/botpress-cloud/6.png" width="60%" alt=""/>
+  <img src=".github/images/botpress-cloud/7.png" width="60%" alt=""/>
+
+  ### 2. Generate User token
+Replace the `WEBHOOK_ID` with your Botpress Cloud webhook ID, id parameter if necessary and run the command to generate a user token
+
+Set the environment variable `BOTPRESS_CLOUD_USER_TOKEN` with the token generated.
+```bash
+  curl --request POST \
+  --url https://chat.botpress.cloud/WEBHOOK_ID/users \
+  --header 'Content-Type: application/json' \
+  --data '{"id": "1"}'
+```
+
+<img src=".github/images/botpress-cloud/8.png" width="60%" alt=""/>
+
+### 3. Get Bot ID
+
+Get your Bot ID from Botpress Cloud studio and set it in environment var `BOTPRESS_BOT_ID`
+
+<img src=".github/images/botpress-cloud/9.png" width="60%" alt=""/>
+
+
+### 4. Configure environment variables
+
+```
+BOTPRESS_ENDPOINT=https://chat.botpress.cloud
+BOTPRESS_BOT_ID=
+BOTPRESS_CLOUD_USER_TOKEN=
+BOTPRESS_CLOUD_WEBHOOK_TOKEN=
+```
+
+
+
+</details>
+
+
+
+ 
 
 # Articles
 
