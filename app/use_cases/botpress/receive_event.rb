@@ -33,7 +33,7 @@ class Botpress::ReceiveEvent < Micro::Case
       conversation_id: conversation_id
     )
 
-    messages_list["messages"].find { |msg| msg.dig("metadata") }&.dig("metadata", "event")
+    messages_list["messages"].find { |msg| msg.dig("metadata", "event", "account") }&.dig("metadata", "event")
   end
 
   def convert_to_botpress_self_hosted_response(botpress_cloud_response)
